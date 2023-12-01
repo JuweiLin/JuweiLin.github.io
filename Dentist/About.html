@@ -53,6 +53,10 @@
         nav ul li a:hover {
             color: #ffffff;
         }
+        nav ul li a.active {
+            border-bottom: 3px solid white;
+            color: white;
+        }
         .about-us-header {
             text-align: center;
             padding: 2px 0;
@@ -109,7 +113,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            max-width: 1000px;  
+            block-size: 500px, 500px;  
             margin-right: 120px;
             margin-left: 120px;
             padding: 40px;
@@ -131,7 +135,10 @@
             margin-bottom: 20px;
         }
         .about-card p {
-            font-size: 1rem;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            font-size: 1.25rem;
             line-height: 1.6;
         }
 
@@ -143,7 +150,7 @@
         <nav>
             <ul>
                 <li><a href="../Dentist.html" >Home</a></li>
-                <li><a href="./About.html" >About</a></li>
+                <li><a href="./About.html" class="active">About</a></li>
                 <li><a href="#">Staff</a></li>
                 <li><a href="#">General Dental Services</a></li>
                 <li><a href="#">Costs & Affordability</a></li>
@@ -166,7 +173,7 @@
             <div class="about-grid">
                 <div class="about-card">
                     <h2>Meet Our Team</h2>
-                    <video width="560" height="315" controls><source src="../images/8-bit.mp4" type="video/mp4"></video>
+                    <video width="400" height="300" controls><source src="../images/8-bit.mp4" type="video/mp4"></video>
                 </div>
                 <div class="about-card">
                     <h2>Our History</h2>
@@ -174,11 +181,11 @@
                 </div>
                 <div class="about-card">
                     <h2>Our Facility</h2>
-                    <img src="../images/Facility.jpg" alt="Our modern dental clinic" width="500" height="300">
+                    <img src="../images/Facility.jpg" alt="Our modern dental clinic" width="400" height="300">
                 </div>
                 <div class="about-card">
                     <h2>Our Team</h2>
-                    <img src="../images/ourteam.jfif" alt="Our friendly staff" width="500" height="300">
+                    <img src="../images/ourteam.jpg" alt="Our friendly staff" width="400" height="300">
                 </div>
             </div>
         </section>
