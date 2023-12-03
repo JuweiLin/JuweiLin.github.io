@@ -3,48 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <title>Pricing - Dandan Dental</title>
-    <!-- Styles and scripts -->
+    <style>
+        /* Other existing styles ... */
+        header {
+            background-color: #003366;
+            padding: 30px 0;
+            text-align: center;
+            position: fixed; 
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        body {
+            padding-top: 70px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        nav p{
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 40px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+        nav ul li a.active {
+            border-bottom: 3px solid white;
+            color: white;
+        }
+        .service-selection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            gap: 40px;
+        }
+
+        .service-box {
+            border: 1px solid #003366;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 45%;
+            height: 45%;
+            max-width: 300px;
+            max-height: 300px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover {
+            background-color: #003366;
+            color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .service-box p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .price-header {
+            text-align: center;
+            padding: 2px 0;
+            color: #003366;
+        }
+        .price-header h1 {
+            font-size: 2rem;
+        }
+        .price-section {
+            border: #003366;
+            padding: 40px 0;
+        }
+
+        .price-section h1 {
+            animation-duration: 3s;
+            animation-name: h1-slidein;
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 20px;
+            margin-left: 20%;
+        }
+
+        .price-section p {
+            animation-duration: 3s;
+            animation-name: p-slidein;
+            color: #003366ee;
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-left: 30%;
+        }
+        @keyframes h1-slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 20%;
+                width: 100%;
+            }
+        }
+        @keyframes p-slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 30%;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <!-- Navigation menu -->
+
+        <nav>
+            <ul>
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">General Dental Services</a></li>
+                <li><a href="./price.html" class="active">Costs & Affordability</a></li>
+            </ul>
+        </nav>
+        
     </header>
-    
     <main>
-        <section>
-            <h1>Pricing</h1>
-            <p>Discover our transparent and competitive pricing for all your dental care needs.</p>
-            
-            <!-- Interactive teeth diagram -->
-            <div id="teeth-diagram">
-                <!-- Image map or interactive elements go here -->
+        <seciton>
+            <div class="price-header">
+                <h1>Costs & Affordability</h1>
             </div>
+        </seciton>
+        <section>
+            <div class="price-section">       
+                <h1>Welcome to Dandan Dental</h1>
+                <p>Caring for Your Smile with Affordable Excellence:<br> Where Quality Meets Value at Dandan Dental.</p>
+            </div>
+        <section>
+        <div class="service-selection">
+            <div class="service-row">
+                <div class="service-box" onclick="selectService('cleaning')">
+                    <h2>Cleaning</h2>
+                    <p>Click for details</p>
+                </div>
+                <div class="service-box" onclick="selectService('products')">
+                    <h2>Products</h2>
+                    <p>Click for details</p>
+                </div>
+            </div>
+            <div class="service-row">
+                <div class="service-box" onclick="selectService('checkup')">
+                    <h2>Checkup</h2>
+                    <p>Click for details</p>
+                </div>
+                <div class="service-box" onclick="selectService('align')">
+                    <h2>Align</h2>
+                    <p>Click for details</p>
+                </div>
+            </div>
+            <div class="service-row">
+                <div class="service-box" onclick="selectService('implants')">
+                    <h2>Implants</h2>
+                    <p>Click for details</p>
+                </div>
+                <div class="service-box" onclick="selectService('faq')">
+                    <h2>FAQ</h2>
+                    <p>Click for details</p>
+                </div>
+            </div>
+            <div class="service-row">
+                <div class="service-box" onclick="selectService('wisdomteeth')">
+                    <h2>Wisdom Teeth</h2>
+                    <p>Click for details</p>
+                </div>
+                <div class="service-box" onclick="selectService('other')">
+                    <h2>Other</h2>
+                    <p>Click for details</p>
+                </div>
+            </div>
+            
+            <!-- Repeat for additional rows of services -->
+        </div>
 
-            <!-- Price list -->
-            <h2>Our Services and Prices</h2>
-            <table>
-                <!-- Table of services and prices -->
-            </table>
-
-            <!-- Special offers -->
-            <h2>Special Offers</h2>
-            <!-- Details of special offers -->
-
-            <!-- Insurance and payment information -->
-            <h2>Insurance and Payment Options</h2>
-            <!-- Information about insurance and payments -->
-
-            <!-- Call to action -->
-            <a href="contact.html" class="button">Get a Personalized Quote</a>
-        </section>
+        <!-- Information Panel -->
+        <!-- ... -->
     </main>
 
     <footer>
-        <!-- Footer content -->
+        <p>Dandan Dental</p>
     </footer>
-
     <script>
-        // Script for interactive teeth diagram
+        function selectService(serviceType) {
+            const serviceUrls = {
+                'cleaning': './price/cleaning.html',
+                'products': './price/products.html',
+                'checkup': './price/checkup.html',
+                'align': './price/align.html',
+                'implants': './price/implants.html',
+                'faq': './price/faq.html',
+                'wisdomteeth': './price/wisdomteeth.html',
+                'other': './price/other.html'
+            };
+
+            // Redirect to the URL associated with the service
+            if (serviceUrls[serviceType]) {
+                window.location.href = serviceUrls[serviceType];
+            }
+        }
     </script>
 </body>
 </html>
