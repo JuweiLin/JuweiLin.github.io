@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Appointment Scheduler</title>
     <style>
-        /* Add your CSS styling here */
         .appointment-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -34,21 +33,16 @@
         .back-button:hover {
             background-color: #bbb;
         }
-        /* Icons can be added with pseudo-elements or img tags */
     </style>
     <script>
         function scheduleAppointment(reason) {
-            // Here you would handle the click event to show more details
-            // For now, we'll just log to the console
             console.log("Appointment reason selected:", reason);
-            // You would also implement logic to show the next step in the process
         }
     </script>
     </head>
 <body>
 
     <header>
-        <!-- ... Your header and navigation here ... -->
         <a onclick="goBack()" class="back-button">&#x2190; Back to Dentist Page</a>
     </header>
     
@@ -58,19 +52,19 @@
             <div class="appointment-grid">
                 <!-- Each card has an onclick event to handle the selection -->
                 <div class="appointment-card" onclick="scheduleAppointment('Emergency')">
-                    <div>🚑</div> <!-- Replace with actual icons -->
+                    <div>🚑</div>
                     <p>Emergency</p>
                 </div>
                 <div class="appointment-card" onclick="scheduleAppointment('Broken Tooth/Tooth Pain')">
-                    <div>🦷</div> <!-- Replace with actual icons -->
+                    <div>🦷</div>
                     <p>Broken Tooth/Tooth Pain</p>
                 </div>
                 <div class="appointment-card" onclick="scheduleAppointment('Dental Implants')">
-                    <div>🔩</div> <!-- Replace with actual icons -->
+                    <div>🔩</div>
                     <p>Dental Implants</p>
                 </div>
                 <div class="appointment-card" onclick="scheduleAppointment('Dentures')">
-                    <div>👄</div> <!-- Replace with actual icons -->
+                    <div>👄</div>
                     <p>Dentures</p>
                 </div>
                 <div class="appointment-card" onclick="scheduleAppointment('Motto™ Clear Aligners')">
@@ -78,7 +72,7 @@
                     <p>Motto™ Clear Aligners</p>
                 </div>
                 <div class="appointment-card" onclick="scheduleAppointment('Other/Check Up')">
-                    <div>✔️</div> <!-- Replace with actual icons -->
+                    <div>✔️</div>
                     <p>Other/Check Up</p>
                 </div>
             </div>
@@ -90,8 +84,7 @@
     </footer>
     <script>
         function goBack() {
-            // Navigate back to the dentist page
-            window.location.href = '../index.html'; // Change to the actual URL of your dentist page
+            window.location.href = '../index.html'; 
         }
     </script>
 
