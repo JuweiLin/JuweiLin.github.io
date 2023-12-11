@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Other Services - Dandan Dental</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .other-services-section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        .other-services-section h2 {
+            color: #003366;
+            font-size: 2rem;
+        }
+
+        .other-service {
+            margin-bottom: 20px;
+        }
+
+        .other-service h3 {
+            color: #003366;
+            font-size: 1.5rem;
+        }
+
+        .other-service p {
+            margin-top: 5px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .other-services-section {
+                margin: 20px;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 8px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #002244;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dandan Dental</h1>
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+    </header>
+
+    <main>
+        <section class="other-services-section">
+            <h2>Other Services</h2>
+
+            <div class="other-service">
+                <h3>Teeth Whitening</h3>
+                <p>Enhance the brightness of your smile with our professional teeth whitening services. Achieve a whiter and brighter smile in just one session.</p>
+            </div>
+
+            <div class="other-service">
+                <h3>Oral Health Education</h3>
+                <p>Learn about proper oral hygiene practices and receive personalized guidance on maintaining optimal oral health for you and your family.</p>
+            </div>
+
+            <div class="other-service">
+                <h3>Sedation Dentistry</h3>
+                <p>If you experience anxiety or fear during dental procedures, ask about our sedation dentistry options to ensure a comfortable and stress-free experience.</p>
+            </div>
+
+            <!-- Add more other services as needed -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = '../price.html';
+        }
+    </script>
+</body>
+</html>
