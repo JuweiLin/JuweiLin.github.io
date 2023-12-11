@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ - Dandan Dental</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .faq-section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        .faq-section h2 {
+            color: #003366;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            margin-top: 5px;
+        }
+
+        .ask-question-form {
+            margin-top: 20px;
+        }
+
+        .confirmation-message {
+            color: green;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                margin: 20px;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 8px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #002244;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dandan Dental</h1>
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+    </header>
+
+    <main>
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">Q: How often should I visit the dentist for a checkup?</p>
+                <p class="faq-answer">A: It is generally recommended to visit the dentist for a checkup every six months for preventive care.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q: Do you offer financing options for dental procedures?</p>
+                <p class="faq-answer">A: Yes, we provide various financing options to make dental care more accessible. Please inquire about our financing plans.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Q: What should I do in case of a dental emergency?</p>
+                <p class="faq-answer">A: In case of a dental emergency, contact our clinic immediately, and we will provide guidance and schedule an emergency appointment.</p>
+            </div>
+
+            <!-- Add more FAQ items as needed -->
+
+        </section>
+
+        <section class="ask-question-form">
+            <h2>Ask a Question</h2>
+            <form id="question-form" onsubmit="submitQuestion(event)">
+                <label for="user-question">Your Question:</label>
+                <textarea id="user-question" name="user-question" rows="4" cols="50" required></textarea>
+                <br>
+                <button type="submit">Submit Question</button>
+            </form>
+            <p class="confirmation-message" id="confirmation-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = '../price.html';
+        }
+
+        function submitQuestion(event) {
+            event.preventDefault();
+            const userQuestion = document.getElementById('user-question').value;
+            document.getElementById('question-form').reset();
+            document.getElementById('confirmation-message').innerText = "Thank you! Your question has been submitted!";
+        }
+    </script>
+</body>
+</html>
