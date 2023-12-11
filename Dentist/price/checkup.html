@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Checkup Services - Dandan Dental</title>
+    <title>Dental Check-Up Services - Dandan Dental</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -22,23 +22,37 @@
             padding: 20px;
         }
 
-        .service-section {
-            background-color: white;
+        .teeth-image-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .teeth-image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .selected-teeth-container,
+        .total-price-container {
             margin: 20px auto;
             padding: 20px;
+            background-color: white;
             border: 1px solid #ccc;
             border-radius: 10px;
             max-width: 800px;
+            text-align: center;
         }
 
-        .service-section h2 {
-            color: #003366;
-            font-size: 2rem;
+        .selected-teeth-list {
+            margin-top: 20px;
         }
 
-        .service-section p {
-            font-size: 1rem;
-            line-height: 1.6;
+        .selected-tooth {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
         }
 
         @media (max-width: 768px) {
@@ -71,12 +85,64 @@
     </header>
 
     <main>
-        <section class="service-section">
-            <h2>Checkup Services</h2>
-            <p>Regular dental checkups are crucial for maintaining optimal oral health. Our comprehensive checkup services include thorough examinations, professional cleanings, and personalized advice for your dental care routine.</p>
-            <p><strong>Price: $120</strong></p> <!-- Example price for Checkup services -->
-            <!-- Additional details, images, or booking links -->
-        </section>
+
+        <div class="teeth-image-container">
+            <img src="../../images/Tooth-Types_Adult_Web.jpg" usemap="#teethMap" alt="Dental Jaws Diagram">
+            
+            <!-- Image map for interactive teeth -->
+            <map name="teethMap">
+                <!-- Example for one tooth area; you will need to repeat for each tooth with proper coordinates -->
+                <area shape="circle" coords="52,264,10" href="#" alt="Tooth 1" onclick="selectTooth(1);">
+                <area shape="circle" coords="57,218,10" href="#" alt="Tooth 1" onclick="selectTooth(2);">
+                <area shape="circle" coords="68,173,10" href="#" alt="Tooth 1" onclick="selectTooth(3);">
+                <area shape="circle" coords="81,133,10" href="#" alt="Tooth 1" onclick="selectTooth(4);">
+                <area shape="circle" coords="104,99,10" href="#" alt="Tooth 1" onclick="selectTooth(5);">
+                <area shape="circle" coords="120,86,10" href="#" alt="Tooth 1" onclick="selectTooth(6);">
+                <area shape="circle" coords="142,73,10" href="#" alt="Tooth 1" onclick="selectTooth(7);">
+                <area shape="circle" coords="171,70,10" href="#" alt="Tooth 1" onclick="selectTooth(8);">
+                <area shape="circle" coords="202,70,10" href="#" alt="Tooth 1" onclick="selectTooth(9);">
+                <area shape="circle" coords="228,77,10" href="#" alt="Tooth 1" onclick="selectTooth(10);">
+                <area shape="circle" coords="246,87,10" href="#" alt="Tooth 1" onclick="selectTooth(11);">
+                <area shape="circle" coords="263,108,10" href="#" alt="Tooth 1" onclick="selectTooth(12);">
+                <area shape="circle" coords="281,135,10" href="#" alt="Tooth 1" onclick="selectTooth(13);">
+                <area shape="circle" coords="296,173,10" href="#" alt="Tooth 1" onclick="selectTooth(14);">
+                <area shape="circle" coords="305,219,10" href="#" alt="Tooth 1" onclick="selectTooth(15);">
+                <area shape="circle" coords="310,264,10" href="#" alt="Tooth 1" onclick="selectTooth(16);">
+
+                <area shape="circle" coords="52,424,10" href="#" alt="Tooth 1" onclick="selectTooth(1);">
+                <area shape="circle" coords="57,466,10" href="#" alt="Tooth 1" onclick="selectTooth(2);">
+                <area shape="circle" coords="68,514,10" href="#" alt="Tooth 1" onclick="selectTooth(3);">
+                <area shape="circle" coords="81,554,10" href="#" alt="Tooth 1" onclick="selectTooth(4);">
+                <area shape="circle" coords="104,582,10" href="#" alt="Tooth 1" onclick="selectTooth(5);">
+                <area shape="circle" coords="120,600,10" href="#" alt="Tooth 1" onclick="selectTooth(6);">
+                <area shape="circle" coords="142,612,10" href="#" alt="Tooth 1" onclick="selectTooth(7);">
+                <area shape="circle" coords="171,619,10" href="#" alt="Tooth 1" onclick="selectTooth(8);">
+                <area shape="circle" coords="202,619,10" href="#" alt="Tooth 1" onclick="selectTooth(9);">
+                <area shape="circle" coords="228,612,10" href="#" alt="Tooth 1" onclick="selectTooth(10);">
+                <area shape="circle" coords="246,600,10" href="#" alt="Tooth 1" onclick="selectTooth(11);">
+                <area shape="circle" coords="263,582,10" href="#" alt="Tooth 1" onclick="selectTooth(12);">
+                <area shape="circle" coords="281,554,10" href="#" alt="Tooth 1" onclick="selectTooth(13);">
+                <area shape="circle" coords="296,514,10" href="#" alt="Tooth 1" onclick="selectTooth(14);">
+                <area shape="circle" coords="305,466,10" href="#" alt="Tooth 1" onclick="selectTooth(15);">
+                <area shape="circle" coords="310,424,10" href="#" alt="Tooth 1" onclick="selectTooth(16);">
+                <!-- ... more areas for each tooth -->
+            </map>
+        </div>
+
+        <div class="selected-teeth-container">
+            <h3>Selected Teeth:</h3>
+            <div id="selected-teeth-list" class="selected-teeth-list">
+                <!-- Selected teeth will be listed here -->
+            </div>
+        </div>
+
+        <!-- Container for displaying total price -->
+        <div class="total-price-container">
+            <h3>Total Price:</h3>
+            <div id="total-price">$0</div>
+        </div>
+
+        <!-- Additional sections if needed -->
     </main>
 
     <footer>
@@ -84,9 +150,61 @@
     </footer>
 
     <script>
+                var selectedTeeth = [];
+        var pricePerTooth = 50; // Example price per tooth for check-up
+
+        function selectTooth(toothIndex) {
+            // Check if the tooth is already selected
+            if (!selectedTeeth.includes(toothIndex)) {
+                selectedTeeth.push(toothIndex);
+                updateSelectedTeethList();
+                updateTotalPrice();
+            } else {
+                alert('Tooth ' + toothIndex + ' is already selected.');
+            }
+        }
+
+        function updateSelectedTeethList() {
+            var listElement = document.getElementById('selected-teeth-list');
+            listElement.innerHTML = ''; // Clear current list
+
+            selectedTeeth.forEach(function(tooth) {
+                var toothElement = document.createElement('span');
+                toothElement.classList.add('selected-tooth');
+                toothElement.textContent = 'Tooth ' + tooth + ' ';
+
+                var removeButton = document.createElement('span');
+                removeButton.textContent = '✖';
+                removeButton.style.cursor = 'pointer';
+                removeButton.style.color = 'red';
+                removeButton.style.marginLeft = '5px';
+                removeButton.onclick = function() { removeTooth(tooth); };
+
+                toothElement.appendChild(removeButton);
+                listElement.appendChild(toothElement);
+            });
+
+            // Scroll to the selected teeth container
+            document.querySelector('.selected-teeth-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function removeTooth(toothIndex) {
+            selectedTeeth = selectedTeeth.filter(function(tooth) {
+                return tooth !== toothIndex;
+            });
+            updateSelectedTeethList();
+            updateTotalPrice();
+        }
+        function updateTotalPrice() {
+            var totalPriceElement = document.getElementById('total-price');
+            var totalPrice = selectedTeeth.length * pricePerTooth;
+            totalPriceElement.textContent = '$' + totalPrice;
+        }
+
         function goBack() {
             window.location.href = '../price.html';
         }
+
     </script>
 </body>
 </html>
