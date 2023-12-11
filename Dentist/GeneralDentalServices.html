@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>General Dental Services</title>
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .service-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .service-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .service-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #ccc;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a onclick="goBack()" class="back-button">&#x2190; Back to Home</a>
+    </header>
+    
+    <main>
+        <section>
+            <h2>General Dental Services</h2>
+            <div class="services-grid">
+                <!-- Each card represents a dental service -->
+                <div class="service-card">
+                    <h2>Cleaning</h2>
+                    <p>Professional dental cleaning to remove plaque, tartar, and stains, promoting healthy gums and a bright smile.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Checkup</h2>
+                    <p>Comprehensive dental checkup including examinations, X-rays, and preventive care to maintain oral health.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Implants</h2>
+                    <p>Dental implants for a natural-looking and durable solution to replace missing teeth and restore your smile.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Wisdom Teeth</h2>
+                    <p>Extraction and management of wisdom teeth to prevent potential issues and ensure oral health.</p>
+                </div>
+                <div class="service-card">
+                    <h2>Align</h2>
+                    <p>Orthodontic treatments, including braces and clear aligners, to straighten teeth and improve bite alignment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dandan Dental</p>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = '../index.html'; 
+        }
+    </script>
+
+</body>
+</html>

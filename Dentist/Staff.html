@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meet Our Staff</title>
+    <style>
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .staff-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .staff-card:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .staff-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .staff-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #ccc;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a onclick="goBack()" class="back-button">&#x2190; Back to Home</a>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Meet Our Staff</h2>
+            <div class="staff-grid">
+                <!-- Each card represents a staff member -->
+                <div class="staff-card">
+                    <h2>Dr. Emily Johnson</h2>
+                    <p>General Dentist</p>
+                    <p>With over 15 years of experience, Dr. Johnson is passionate about providing quality dental care to our patients.</p>
+                </div>
+                <div class="staff-card">
+                    <h2>Dr. Michael Davis</h2>
+                    <p>Orthodontist</p>
+                    <p>Specializing in orthodontics, Dr. Davis is dedicated to creating beautiful smiles for patients of all ages.</p>
+                </div>
+                <div class="staff-card">
+                    <h2>Nurse Sarah Thompson</h2>
+                    <p>Dental Nurse</p>
+                    <p>Sarah is a compassionate dental nurse who ensures the comfort and well-being of our patients during their visits.</p>
+                </div>
+                <div class="staff-card">
+                    <h2>Hygienist Jessica White</h2>
+                    <p>Dental Hygienist</p>
+                    <p>Jessica is committed to promoting good oral hygiene habits and helping patients maintain healthy smiles.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dandan Dental</p>
+    </footer>
+    <script>
+        function goBack() {
+            window.location.href = '../index.html'; 
+        }
+    </script>
+
+</body>
+</html>
