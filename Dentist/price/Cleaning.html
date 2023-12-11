@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dental Cleaning Services - Dandan Dental</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .service-section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        .service-section h2 {
+            color: #003366;
+            font-size: 2rem;
+        }
+
+        .service-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .service-section {
+                margin: 20px;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 8px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #002244;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dandan Dental</h1>
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+    </header>
+
+    <main>
+        <section class="service-section">
+            <h2>Regular Cleaning</h2>
+            <p>Regular cleaning, also known as prophylaxis, is essential for maintaining good oral hygiene. This routine procedure is recommended bi-annually to remove plaque buildup, prevent cavities, and keep your gums healthy.</p>
+            <p><strong>Price: $75</strong></p> <!-- Added price for Regular Cleaning -->
+            <!-- Additional details, images, or booking links -->
+        </section>
+
+        <section class="service-section">
+            <h2>Deep Cleaning</h2>
+            <p>Deep cleaning, or scaling and root planing, is a more intensive cleaning procedure. It is typically recommended for patients with signs of gum disease and involves removing tartar from above and below the gum line.</p>
+            <p><strong>Price: $200</strong></p> <!-- Added price for Deep Cleaning -->
+            <!-- Additional details, images, or booking links -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = '../price.html';
+        }
+    </script>
+</body>
+</html>
