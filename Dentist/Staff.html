@@ -65,6 +65,50 @@
         .staff-header h1 {
             font-size: 2rem;
         }
+        .staff-section {
+            border: #003366;
+            padding: 40px 0;
+        }
+
+        .staff-section h1 {
+            animation-duration: 3s;
+            animation-name: h1-slidein;
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 20px;
+            margin-left: 20%;
+        }
+
+        .staff-section p {
+            animation-duration: 3s;
+            animation-name: p-slidein;
+            color: #003366ee;
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-left: 30%;
+        }
+        @keyframes h1-slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 20%;
+                width: 100%;
+            }
+        }
+        @keyframes p-slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 30%;
+                width: 100%;
+            }
+        }
         .staff-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -126,6 +170,16 @@
     </header>
     
     <main>
+        <section>
+            <div class="staff-header">
+                <h1>Meet Our Staff</h1>
+            </div>
+        </seciton>
+        <section>
+            <div class="staff-section">       
+                <h1>Welcome to Dandan Dental</h1>
+                <p>where you will be treated by the finest and most experienced dentist.</p>
+            </div>
         <section>
             <h2>Meet Our Staff</h2>
             <div class="staff-grid">
