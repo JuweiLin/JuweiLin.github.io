@@ -4,6 +4,59 @@
     <meta charset="UTF-8">
     <title>Meet Our Staff</title>
     <style>
+        header {
+            background-color: #003366;
+            padding: 30px 0;
+            text-align: center;
+            position: fixed; 
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 70px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        nav p{
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 40px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+        nav ul li a.active {
+            border-bottom: 3px solid white;
+            color: white;
+        }
         .staff-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -47,7 +100,19 @@
     </style>
 </head>
 <body>
+    <header>
 
+        <nav>
+            <ul>
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Staff.html" class="active">Staff</a></li>
+                <li><a href="GeneralDentalServices.html">General Dental Services</a></li>
+                <li><a href="./price.html">Costs & Affordability</a></li>
+            </ul>
+        </nav>
+        
+    </header>
     <header>
         <a onclick="goBack()" class="back-button">&#x2190; Back to Home</a>
     </header>
