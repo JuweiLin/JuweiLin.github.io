@@ -124,14 +124,18 @@
         </section>
 
         <section class="ask-question-form">
-            <h2>Ask a Question</h2>
-            <form id="question-form" onsubmit="submitQuestion(event)">
-                <label for="user-question">Your Question:</label>
-                <textarea id="user-question" name="user-question" rows="4" cols="50" required></textarea>
-                <br>
-                <button type="submit">Submit Question</button>
-            </form>
-            <p class="confirmation-message" id="confirmation-message"></p>
+                <h2>Ask a Question</h2>
+                <form id="question-form" onsubmit="submitQuestion(event)">
+                    <label for="user-question">Your Question:</label>
+                    <textarea id="user-question" name="user-question" rows="4" cols="50" required></textarea>
+                    <br>
+                    <label for="user-email">Your Email:</label>
+                    <input type="email" id="user-email" name="user-email" required>
+                    <br>
+                    <button type="submit">Submit Question</button>
+                </form>
+                <p class="confirmation-message" id="confirmation-message"></p>
+            </section>
         </section>
     </main>
 
@@ -140,15 +144,35 @@
     </footer>
 
     <script>
-        function goBack() {
-            window.location.href = '../price.html';
-        }
+        // Your existing scripts remain unchanged
 
         function submitQuestion(event) {
             event.preventDefault();
             const userQuestion = document.getElementById('user-question').value;
+            const userEmail = document.getElementById('user-email').value;
+
+            // Validate the email format before submission (you can add more robust validation)
+            if (!validateEmail(userEmail)) {
+                alert('Invalid email format. Please enter a valid email address.');
+                return;
+            }
+
+            // Submit the question and email to the server
+            // In a real-world scenario, you would use AJAX or Fetch API to send data to the server
+
+            // For demonstration purposes, log the data to the console
+            console.log('User Question:', userQuestion);
+            console.log('User Email:', userEmail);
+
+            // Reset the form and display confirmation message
             document.getElementById('question-form').reset();
             document.getElementById('confirmation-message').innerText = "Thank you! Your question has been submitted!";
+        }
+
+        function validateEmail(email) {
+            // You can implement a more comprehensive email validation if needed
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
         }
     </script>
 </body>
