@@ -2,81 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FAQ - Dandan Dental</title>
+    <title>Dental Check-Up Services - Dandan Dental</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-        header, footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
+    header, footer {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
 
-        main {
-            padding: 20px;
-        }
+    main {
+        padding: 20px;
+    }
 
-        .faq-section {
-            background-color: white;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            max-width: 800px;
-        }
+    .teeth-image-container {
+        text-align: center;
+        margin: 20px auto;
+    }
 
-        .faq-section h2 {
-            color: #003366;
-            font-size: 2rem;
-        }
+    .teeth-image-container img {
+        max-width: 100%;
+        height: auto;
+    }
 
-        .faq-item {
-            margin-bottom: 20px;
-        }
+    .selected-teeth-container {
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: center;
+    }
 
-        .faq-question {
-            font-weight: bold;
-        }
+    .selected-teeth-list {
+        margin-top: 20px;
+    }
 
-        .faq-answer {
-            margin-top: 5px;
-        }
+    .selected-tooth {
+        display: inline-block;
+        margin: 5px;
+        padding: 5px 10px;
+        background-color: #e6e6e6;
+        border-radius: 5px;
+    }
 
-        .ask-question-form {
-            margin-top: 20px;
-        }
+    .back-button {
+        display: inline-block;
+        margin: 10px;
+        padding: 8px 15px;
+        background-color: #003366;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        .confirmation-message {
-            color: green;
-            font-weight: bold;
-        }
+    .back-button:hover {
+        background-color: #002244;
+    }
 
-        @media (max-width: 768px) {
-            .faq-section {
-                margin: 20px;
-            }
-        }
+    .instructions {
+        text-align: center;
+        margin: 20px;
+        font-size: 1.2rem;
+    }
 
-        .back-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #003366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .faq-container {
+        margin-top: 20px;
+        text-align: center;
+    }
 
-        .back-button:hover {
-            background-color: #002244;
+    .faq-dropdown {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .tooth-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .tooth-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .tooth-number {
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .remove-tooth-btn {
+        border: none;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 15px;
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .remove-tooth-btn:hover {
+        background-color: #ff3333;
+    }
+
+    .tooth-faq-dropdown {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .total-price-container {
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .selected-teeth-container,
+        .total-price-container {
+            width: auto;
+            margin: 20px;
         }
+    }
+
 
     </style>
 </head>
@@ -87,56 +157,78 @@
     </header>
 
     <main>
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
+        <h2 class="teeth-selection-title" style="text-align:center;">Tooth Selection</h2>
 
-            <div class="faq-item">
-                <p class="faq-question">Q: How often should I visit the dentist for a checkup?</p>
-                <p class="faq-answer">A: It is generally recommended to visit the dentist for a checkup every six months for preventive care.</p>
+        <div class="instructions">
+            <p>Please click on the diagram below to select the teeth you want checked.</p>
+        </div>
+
+        <!-- Title for the teeth selection section -->
+
+
+        <div class="teeth-image-container">
+            <img src="../../images/Tooth-Types_Adult_Web.jpg" usemap="#teethMap" alt="Dental Jaws Diagram">
+            
+            <!-- Image map for interactive teeth -->
+            <map name="teethMap">
+                <!-- Example for one tooth area; you will need to repeat for each tooth with proper coordinates -->
+                <area shape="circle" coords="52,264,10" href="#" alt="Tooth 1" onclick="selectTooth(18);">
+                <area shape="circle" coords="57,218,10" href="#" alt="Tooth 1" onclick="selectTooth(17);">
+                <area shape="circle" coords="68,173,10" href="#" alt="Tooth 1" onclick="selectTooth(16);">
+                <area shape="circle" coords="81,133,10" href="#" alt="Tooth 1" onclick="selectTooth(15);">
+                <area shape="circle" coords="104,99,10" href="#" alt="Tooth 1" onclick="selectTooth(14);">
+                <area shape="circle" coords="120,86,10" href="#" alt="Tooth 1" onclick="selectTooth(13);">
+                <area shape="circle" coords="142,73,10" href="#" alt="Tooth 1" onclick="selectTooth(12);">
+                <area shape="circle" coords="171,70,10" href="#" alt="Tooth 1" onclick="selectTooth(11);">
+                <area shape="circle" coords="202,70,10" href="#" alt="Tooth 1" onclick="selectTooth(21);">
+                <area shape="circle" coords="228,77,10" href="#" alt="Tooth 1" onclick="selectTooth(22);">
+                <area shape="circle" coords="246,87,10" href="#" alt="Tooth 1" onclick="selectTooth(23);">
+                <area shape="circle" coords="263,108,10" href="#" alt="Tooth 1" onclick="selectTooth(24);">
+                <area shape="circle" coords="281,135,10" href="#" alt="Tooth 1" onclick="selectTooth(25);">
+                <area shape="circle" coords="296,173,10" href="#" alt="Tooth 1" onclick="selectTooth(26);">
+                <area shape="circle" coords="305,219,10" href="#" alt="Tooth 1" onclick="selectTooth(27);">
+                <area shape="circle" coords="310,264,10" href="#" alt="Tooth 1" onclick="selectTooth(28);">
+
+                <area shape="circle" coords="52,424,10" href="#" alt="Tooth 1" onclick="selectTooth(48);">
+                <area shape="circle" coords="57,466,10" href="#" alt="Tooth 1" onclick="selectTooth(47);">
+                <area shape="circle" coords="68,514,10" href="#" alt="Tooth 1" onclick="selectTooth(46);">
+                <area shape="circle" coords="81,554,10" href="#" alt="Tooth 1" onclick="selectTooth(45);">
+                <area shape="circle" coords="104,582,10" href="#" alt="Tooth 1" onclick="selectTooth(44);">
+                <area shape="circle" coords="120,600,10" href="#" alt="Tooth 1" onclick="selectTooth(43);">
+                <area shape="circle" coords="142,612,10" href="#" alt="Tooth 1" onclick="selectTooth(42);">
+                <area shape="circle" coords="171,619,10" href="#" alt="Tooth 1" onclick="selectTooth(41);">
+                <area shape="circle" coords="202,619,10" href="#" alt="Tooth 1" onclick="selectTooth(31);">
+                <area shape="circle" coords="228,612,10" href="#" alt="Tooth 1" onclick="selectTooth(32);">
+                <area shape="circle" coords="246,600,10" href="#" alt="Tooth 1" onclick="selectTooth(33);">
+                <area shape="circle" coords="263,582,10" href="#" alt="Tooth 1" onclick="selectTooth(34);">
+                <area shape="circle" coords="281,554,10" href="#" alt="Tooth 1" onclick="selectTooth(35);">
+                <area shape="circle" coords="296,514,10" href="#" alt="Tooth 1" onclick="selectTooth(36);">
+                <area shape="circle" coords="305,466,10" href="#" alt="Tooth 1" onclick="selectTooth(37);">
+                <area shape="circle" coords="310,424,10" href="#" alt="Tooth 1" onclick="selectTooth(38);">
+                <!-- ... more areas for each tooth -->
+            </map>
+        </div>
+
+        <div class="selected-teeth-container">
+            <h3>Selected Teeth:</h3>
+            <div id="selected-teeth-list" class="selected-teeth-list">
+                <!-- Selected teeth will be listed here -->
             </div>
+        </div>
 
-            <div class="faq-item">
-                <p class="faq-question">Q: Do you offer financing options for dental procedures?</p>
-                <p class="faq-answer">A: Yes, we provide various financing options to make dental care more accessible. Please inquire about our financing plans.</p>
-            </div>
+        <!-- Container for displaying total price -->
+        <div class="faq-container" id="faq-container" style="display: none;">
+            <label for="faq-dropdown">Please choose an option for your selected tooth:</label>
+            <select id="faq-dropdown" class="faq-dropdown" onchange="updateTotalPrice()">
+                <!-- FAQ options will be dynamically populated based on tooth selection -->
+            </select>
+        </div>
+        
+        <div class="total-price-container" id="total-price-display">
+            Total Price: <span id="total-price">0</span>
+        </div>
 
-            <div class="faq-item">
-                <p class="faq-question">Q: What should I do in case of a dental emergency?</p>
-                <p class="faq-answer">A: In case of a dental emergency, contact our clinic immediately, and we will provide guidance and schedule an emergency appointment.</p>
-            </div>
-             <div class="faq-item">
-                <div class="faq-question">Q: What causes cavities?</div>
-                <div class="faq-answer">A: Cavities are primarily caused by plaque, a sticky film of bacteria that forms on teeth. The bacteria produce acids that can erode tooth enamel, leading to cavities.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q: How can I prevent cavities?</div>
-                <div class="faq-answer">A: To prevent cavities, maintain good oral hygiene by brushing your teeth twice a day, flossing daily, and visiting your dentist for regular checkups and cleanings. Additionally, limit sugary food and drinks.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Q: What are the symptoms of a cavity?</div>
-                <div class="faq-answer">A: Common symptoms of a cavity include toothache, sensitivity to hot or cold temperatures, visible holes or pits in the teeth, and pain when chewing.</div>
-            </div>
-
-            <!-- Add more FAQ items as needed -->
-
-        </section>
-
-        <section class="ask-question-form">
-                <h2>Ask a Question</h2>
-                <form id="question-form" onsubmit="submitQuestion(event)">
-                    <label for="user-question">Your Question:</label>
-                    <textarea id="user-question" name="user-question" rows="4" cols="50" required></textarea>
-                    <br>
-                    <label for="user-email">Your Email:</label>
-                    <input type="email" id="user-email" name="user-email" required>
-                    <br>
-                    <button type="submit">Submit Question</button>
-                </form>
-                <p class="confirmation-message" id="confirmation-message"></p>
-            </section>
-        </section>
+        <!-- Additional sections if needed -->
     </main>
 
     <footer>
@@ -144,36 +236,88 @@
     </footer>
 
     <script>
-        // Your existing scripts remain unchanged
-
-        function submitQuestion(event) {
-            event.preventDefault();
-            const userQuestion = document.getElementById('user-question').value;
-            const userEmail = document.getElementById('user-email').value;
-
-            // Validate the email format before submission (you can add more robust validation)
-            if (!validateEmail(userEmail)) {
-                alert('Invalid email format. Please enter a valid email address.');
-                return;
-            }
-
-            // Submit the question and email to the server
-            // In a real-world scenario, you would use AJAX or Fetch API to send data to the server
-
-            // For demonstration purposes, log the data to the console
-            console.log('User Question:', userQuestion);
-            console.log('User Email:', userEmail);
-
-            // Reset the form and display confirmation message
-            document.getElementById('question-form').reset();
-            document.getElementById('confirmation-message').innerText = "Thank you! Your question has been submitted!";
-        }
-
-        function validateEmail(email) {
-            // You can implement a more comprehensive email validation if needed
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    </script>
+        var selectedTeeth = [];
+         var pricePerTooth = 50; // Adjust the price per tooth as needed
+         var additionalServices = {
+             'Extraction': 20,
+             'Filling': 30,
+             // Add more services and their prices here
+         };
+     
+         function updateFAQDropdown(toothIndex) {
+             var faqDropdown = document.getElementById('faq-dropdown-' + toothIndex);
+             if (faqDropdown) {
+                 faqDropdown.innerHTML = '';
+                 for (var service in additionalServices) {
+                     var option = document.createElement('option');
+                     option.value = additionalServices[service];
+                     option.textContent = service + ' - $' + additionalServices[service];
+                     faqDropdown.appendChild(option);
+                 }
+             }
+         }
+     
+         function selectTooth(toothIndex) {
+             if (!selectedTeeth.includes(toothIndex)) {
+                 selectedTeeth.push(toothIndex);
+                 updateSelectedTeethList();
+                 updateTotalPrice();
+             } else {
+                 alert('Tooth ' + toothIndex + ' is already selected.');
+             }
+         }
+     
+         function updateSelectedTeethList() {
+             var listElement = document.getElementById('selected-teeth-list');
+             listElement.innerHTML = '';
+     
+             selectedTeeth.forEach(function(tooth) {
+                 var toothElement = document.createElement('div');
+                 toothElement.classList.add('selected-tooth');
+                 toothElement.id = 'tooth-' + tooth;
+     
+                 var toothNumberSpan = document.createElement('span');
+                 toothNumberSpan.textContent = 'Tooth ' + tooth;
+     
+                 var removeButton = document.createElement('button');
+                 removeButton.textContent = '✖';
+                 removeButton.onclick = function() { removeTooth(tooth); };
+     
+                 var faqDropdown = document.createElement('select');
+                 faqDropdown.id = 'faq-dropdown-' + tooth;
+                 faqDropdown.onchange = updateTotalPrice;
+     
+                 toothElement.appendChild(toothNumberSpan);
+                 toothElement.appendChild(removeButton);
+                 toothElement.appendChild(faqDropdown);
+                 listElement.appendChild(toothElement);
+     
+                 updateFAQDropdown(tooth);
+             });
+         }
+     
+         function removeTooth(toothIndex) {
+             selectedTeeth = selectedTeeth.filter(function(tooth) {
+                 return tooth !== toothIndex;
+             });
+             updateSelectedTeethList();
+             updateTotalPrice();
+         }
+     
+         function updateTotalPrice() {
+             var totalPrice = selectedTeeth.length * pricePerTooth;
+             selectedTeeth.forEach(function(tooth) {
+                 var faqDropdown = document.getElementById('faq-dropdown-' + tooth);
+                 if (faqDropdown) {
+                     totalPrice += parseFloat(faqDropdown.value);
+                 }
+             });
+             document.getElementById('total-price').textContent = '$' + totalPrice.toFixed(2);
+         }
+     
+         function goBack() {
+             window.location.href = '../price.html';
+         }
+     </script>
 </body>
 </html>
