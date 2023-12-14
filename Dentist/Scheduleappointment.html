@@ -226,6 +226,8 @@
         const recipientEmail = document.getElementById('email').value;
         const recipientName = document.getElementById('firstName').value;
         const recipientLastName = document.getElementById('lastName').value;
+     
+  
         // Specify your email content dynamically
         const data = {
             to_email: recipientEmail,
@@ -242,6 +244,8 @@
             calender_date: date_time,
             time_slot: selectedTime,
             email: recipientEmail,
+            reason: appointment_reason,
+            provider:'Dr Emily',
 });
     }
     </script>
