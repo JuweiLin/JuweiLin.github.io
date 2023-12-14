@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Appointment Scheduler</title>
     <style>
+         footer {
+            background-color: #f2f2f2;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
         .appointment-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -17,6 +28,7 @@
             text-align: center;
             cursor: pointer;
         }
+
         .appointment-card:hover {
             background-color: #f0f0f0;
         }
@@ -33,11 +45,205 @@
         .back-button:hover {
             background-color: #bbb;
         }
+        .form-section {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;  
+        }
+
+        .current-section {
+            display: block;
+        }
+        .Assistance {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #dropbox{display: 'none';
+        }
+        .return_button_section {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
     </style>
     <script>
+    var firstNameValue = '';
+    var lastNameValue = '';
+    var dobValue = '';
+    var emailValue = '';
+    var phoneNumberValue = '';
+    var appointment_reason = '';
+    var calender='';
+    var date_time = '';
+    var selectedTime = '';
         function scheduleAppointment(reason) {
+            appointment_reason = reason;
             console.log("Appointment reason selected:", reason);
+            showFormSections()
         }
+        function showFormSections() {
+            // Hide the appointment card section
+            document.getElementById('appointmentCardSection').style.display = 'none';
+            
+            // Show the first section of the form
+            document.getElementById('formSection1').style.display = 'block';
+        }
+        function nextFormSection(currentSection, nextSection) {
+            // Hide the current section
+            document.getElementById(currentSection).style.display = 'none';
+
+            // Show the next section
+            document.getElementById(nextSection).style.display = 'block';
+        }
+        function returnAppointment(currentSection) {
+            if(currentSection == 'formSection1'){
+            document.getElementById('formSection2').style.display = 'none';
+            document.getElementById('appointmentCardSection').style.display = 'block';
+            document.getElementById('formSection1').style.display = 'none';
+            document.getElementById('formSection2').style.display = 'none';
+            }
+            else if(currentSection == 'formSection2'){
+            // Reset formSection2 fields
+            document.getElementById('appointmentCardSection').style.display = 'none';
+            document.getElementById('formSection2').style.display = 'none';
+            document.getElementById('formSection1').style.display = 'block';
+            }
+            else if(currentSection=='formSection3'){
+                document.getElementById('formSection3').style.display = 'none';
+                document.getElementById('formSection2').style.display = 'block';    
+            }
+            else if(currentSection=='formSection4'){
+                document.getElementById('formSection4').style.display = 'none';
+                document.getElementById('formSection3').style.display = 'block'; 
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('Calender').addEventListener('change', function () {
+            appointment_slots_random();
+        });
+    });
+
+    function appointment_slots_random() {
+        const calender = document.getElementById('Calender').value;
+        const slotsContainer = document.getElementById('Appointment_slots');
+    
+        if (calender.trim() !== '') {
+            slotsContainer.style.display = 'block';
+            generateAvailableSlots(calender);
+        } else {
+            slotsContainer.style.display = 'none';
+        }
+    }
+    function generateAvailableSlots(selectedDate) {
+    // Assume slots are generated for the day from 9:00 AM to 4:30 PM
+    const allSlots = generateTimeSlots();
+
+    // Randomly select a subset of slots (change the count as needed)
+    const numberOfSlotsToShow = 3;
+    const selectedSlots = getRandomSubset(allSlots, numberOfSlotsToShow);
+
+    // Display the selected slots in ascending order
+    const slotsContainer = document.getElementById('Appointment_slots');
+    slotsContainer.innerHTML = '<h3>Available Slots:</h3>';
+    selectedSlots.sort().forEach(slot => {
+        const button = document.createElement('button');
+        button.type = 'button'; // Set button type to "button"
+        button.innerHTML = slot;
+        button.onclick = function () {
+            // Handle button click
+            date_time = document.getElementById('Calender').value;
+            selectedTime = slot;
+            disableOtherButtons();
+        };
+        slotsContainer.appendChild(button);
+    });
+}
+    function disableOtherButtons() {
+        const buttons = document.querySelectorAll('#Appointment_slots button');
+        buttons.forEach(button => {
+            if (button.innerHTML !== selectedTime) {
+                button.disabled = true;
+            }
+        });
+    }
+    function generateTimeSlots() {
+        const startTime = 9; // 9:00 AM
+        const endTime = 16.5; // 4:30 PM
+        const timeSlots = [];
+        for (let i = startTime; i <= endTime; i += 0.5) {
+            const hours = Math.floor(i);
+            const minutes = (i % 1) * 60;
+            const period = hours >= 12 ? 'PM' : 'AM';
+            const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+            const formattedTime = `${String(formattedHours).padStart(2, '0')}:${String(minutes).padStart(2, '0')} ${period}`;
+            timeSlots.push(formattedTime);
+        }
+        return timeSlots;
+    }
+
+    function getRandomSubset(array, count) {
+        const shuffledArray = array.sort(() => Math.random() - 0.5);
+        return shuffledArray.slice(0, count);
+    }
+        function submitAppointment() {
+                    // Display the collected information in the final section
+                
+                firstNameValue = document.getElementById('firstName').value;
+                lastNameValue = document.getElementById('lastName').value;
+                dobValue = document.getElementById('DOB').value;
+                emailValue = document.getElementById('email').value;
+                phoneNumberValue = document.getElementById('phoneNumber').value;
+                
+                document.getElementById('finalSectionInfo').innerHTML = `
+                <p>Name: ${firstNameValue} ${lastNameValue} Email: ${emailValue}</p>
+                <p>Phone Number: ${phoneNumberValue} Reason: ${appointment_reason}</p>
+                <p> Appointment Date & Time: ${date_time} ${selectedTime}</p>
+             
+            `;
+            // Show the final section
+            document.getElementById('formSection4').style.display='block';
+            document.getElementById('formSection3').style.display='none';
+           document.getElementById('finalSectionInfo').style.display='block';
+
+        }
+        function toggleDropBox() {
+        var selection = document.getElementById('selection');
+        var dropbox = document.getElementById('dropbox');
+        if(selection.value == "yes"){dropbox.style.display='block';}
+        else {dropbox.style.display='none';}
+        }
+
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    // Include your EmailJS User ID
+    emailjs.init("qAQh4VUB144KZBddD");
+
+    function sendEmail() {
+        // Collect form data or any data you want to include in the email
+        const recipientEmail = document.getElementById('email').value;
+        const recipientName = document.getElementById('firstName').value;
+        const recipientLastName = document.getElementById('lastName').value;
+        // Specify your email content dynamically
+        const data = {
+            to_email: recipientEmail,
+            to_name: recipientName,
+            from_name: "AutoGenerated Email",
+            message: "This is the confirmation of your appointment. Followed by a Google Maps link.",
+        };
+
+        // Send the email
+        emailjs.send("service_35c2kmd","template_b6c527p",{
+            from_name: "Auto_generated",
+            first_name: recipientName,
+            last_name: recipientLastName,
+            calender_date: date_time,
+            time_slot: selectedTime,
+            email: recipientEmail,
+});
+    }
     </script>
     </head>
 <body>
@@ -47,7 +253,8 @@
     </header>
     
     <main>
-        <section>
+
+        <section id="appointmentCardSection">
             <h2>What's the reason for your visit?</h2>
             <div class="appointment-grid">
                 <!-- Each card has an onclick event to handle the selection -->
@@ -77,10 +284,79 @@
                 </div>
             </div>
         </section>
+        <div id="formSection1" class="form-section">
+            <h2>Step 1: Personal Information</h2>
+            <form onsubmit="nextFormSection('formSection1', 'formSection2'); return false;">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <br>
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+                <label for="DOB">Date of Birth*:</label>
+                <input type="date" id="DOB" name="DOB" placeholder="MM/DD/YR" required>
+                <br>
+                <div id="Assistance">Need Assistance? Contact +86 0577-88959998</div>
+                <button type="submit">Continue</button>
+                <button class="return_button_section" type="button" onclick="returnAppointment('formSection1')">Back</button> 
+            </form>
+           
+        </div>
+        <div id="formSection2" class="form-section">
+            <h2>Step 2:Contact Information</h2>
+            <form onsubmit="nextFormSection('formSection2','formSection3'); return false;">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phoneNumber">Phone Number*</label>
+                <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required>
+                <div id="Assistance">Need Assistance? Contact +86 0577-88959998</div>
+                <button type="submit">Continue</button>
+                <button class="return_button_section" type="button" onclick="returnAppointment('formSection2')">Back</button>
+            </form>
+
+        </div>
+      
+        <div id="formSection3" class="form-section">
+                <h2>Appointment information</h2>
+                <form onsubmit="submitAppointment();return false;">
+                    <label for="selection">Are you a returning patient?</label>
+                    <select id="selection" onchange='toggleDropBox();return false;' required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="yes" >yes</option>
+                        <option value="no" >no</option>
+                    </select>
+                    <div id="dropbox">
+                        <label for="items">Who is your Primary care Dentist?</label>
+                        <select id="items">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="item1">Dr. Emily Johnson</option>
+                            <option value="item2">Dr. Micheal Davis</option>
+                            <option value="item3">Dr. Robert Miller</option>
+                            <option value="item4">Dr. Olivia Turner</option>
+                        </select>
+                    </div>
+                    <label for="Calender">Date preference </label>
+                    <input type="date" id="Calender" name="Calender" required>
+                    
+                    <div id="Appointment_slots"></div>
+
+                    <div id="Assistance">Need Assistance? Contact +86 0577-88959998</div>
+                    <button type="submit" >Continue</button>
+                    <button class="return_button_section" type="button" onclick="returnAppointment('formSection3')">Back</button>
+                </form>
+        </div>
+
+        <div id="formSection4" class="form-section">
+                <h2>Review Information</h2>
+                <div id="finalSectionInfo"></div>
+                <button type="button" onclick="sendEmail()">Confirm</button>
+                <button class="return_button_section" type="button" onclick="returnAppointment('formSection4')">Back</button> 
+        </div>
+        
     </main>
 
     <footer>
-        <p>Dandan Dental</p>
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
     <script>
         function goBack() {
