@@ -1,9 +1,16 @@
 <!DOCTYPE html>
+<!-- HTML5 doctype declaration, indicating that this is an HTML5 document -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tag for specifying the character encoding for the HTML document -->
     <title>Align Services - Dandan Dental</title>
+    <!-- Title of the web page, shown in the browser tab -->
+
     <style>
+        /* CSS styles for the page */
+
+        /* Styling for the body: font, background color, and default margin and padding */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
@@ -11,6 +18,7 @@
             padding: 0;
         }
 
+        /* Styling for header and footer: background color, text color, alignment, and padding */
         header, footer {
             background-color: #003366;
             color: white;
@@ -18,10 +26,12 @@
             padding: 15px 0;
         }
 
+        /* Main content padding */
         main {
             padding: 20px;
         }
 
+        /* Styling for service sections: background, margin, padding, border, and max width */
         .service-section {
             background-color: white;
             margin: 20px auto;
@@ -31,41 +41,49 @@
             max-width: 800px;
         }
 
+        /* Styling for headings in service sections */
         .service-section h2 {
             color: #003366;
             font-size: 2rem;
         }
 
+        /* Styling for paragraphs in service sections */
         .service-section p {
             font-size: 1rem;
             line-height: 1.6;
         }
 
+        /* Styling for the precautions section */
         .precautions {
             margin-top: 20px;
         }
 
+        /* Styling for headings in precautions section */
         .precautions h3 {
             color: #003366;
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
+        /* Styling for list in precautions section */
         .precautions ul {
             list-style-type: none;
             padding: 0;
         }
 
+        /* List item styling in precautions section */
         .precautions li {
             margin-bottom: 5px;
         }
 
+        /* Responsive design: Adjust service section margin for smaller screens */
         @media (max-width: 768px) {
             .service-section {
                 margin: 20px;
             }
         }
 
+        /* Styling for the back button */
         .back-button {
             display: inline-block;
             margin: 10px;
@@ -77,23 +95,25 @@
             cursor: pointer;
         }
 
+        /* Hover effect for the back button */
         .back-button:hover {
             background-color: #002244;
         }
-
     </style>
 </head>
 <body>
     <header>
+        <!-- Header content: site name and back button -->
         <h1>Dandan Dental</h1>
         <a onclick="goBack()" class="back-button">&#x2190; Back</a>
     </header>
 
     <main>
+        <!-- Main content of the page: Align services description and precautions -->
         <section class="service-section">
             <h2>Align Services</h2>
             <p>Our Align services focus on providing solutions for misaligned teeth. Whether it's traditional braces or modern clear aligners, our experienced orthodontists tailor treatment plans to meet individual needs, ensuring a straighter and healthier smile.</p>
-            <p><strong>Price: Starting from $2,000</strong></p> <!-- Example starting price for Align services -->
+            <p><strong>Price: Starting from $2,000</strong></p> <!-- Pricing info -->
             <div class="precautions">
                 <h3>Precautions:</h3>
                 <ul>
@@ -103,15 +123,17 @@
                     <li>Maintain proper oral hygiene to prevent issues during the alignment process.</li>
                 </ul>
             </div>
-            <!-- Additional details, images, or booking links -->
+            <!-- Placeholder for additional content like images or booking links -->
         </section>
     </main>
 
     <footer>
+        <!-- Footer content: copyright information -->
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
 
     <script>
+        // JavaScript function to go back to the previous page
         function goBack() {
             window.location.href = '../price.html';
         }
