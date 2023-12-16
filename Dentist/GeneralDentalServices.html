@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>General Dental Services</title>
     <style>
+        /* Header styling: Fixed position, background color, and padding */
         header {
             background-color: #003366;
             padding: 30px 0;
@@ -14,26 +15,31 @@
             left: 0;
             z-index: 1000;
         }
+        /* Body styling: Padding and font settings */
         body {
             padding-top: 70px;
             font-family: 'Open Sans', sans-serif;
         }
+        /* Footer styling: Background color, text color, alignment, and padding */
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 15px 0;
         }
+        /* Styling for paragraphs within the footer */
         footer p {
             font-size: 16px;
             font-weight: 400;
             color: #666666;
         }
+        /* Styling for paragraphs within the navigation */
         nav p{
             font-size: 20px;
             font-weight: 400;
             margin-bottom: 30px;
         }
+        /* Navigation list styling: Flex display, no list style, padding, and margin */
         nav ul {
             list-style: none;
             padding: 0;
@@ -41,31 +47,38 @@
             display: flex;
             justify-content: right;
         }
+        /* Styling for list items in the navigation: Inline display and margin */
         nav ul li {
             display: inline-block;
             margin-right: 40px;
         }
+        /* Styling for links in the navigation: No text decoration, font size, weight, and color */
         nav ul li a {
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
             color: #ffffff;
         }
+        /* Hover effect for navigation links */
         nav ul li a:hover {
             color: #ffffff;
         }
+        /* Active link styling in navigation */
         nav ul li a.active {
             border-bottom: 3px solid white;
             color: white;
         }
+        /* Service header styling: Text alignment, padding, and color */
         .service-header {
             text-align: center;
             padding: 2px 0;
             color: #003366;
         }
+        /* Styling for h1 elements within service header */
         .service-header h1 {
             font-size: 2rem;
         }
+        /* Service section styling: Border, padding, and slide-in animations for h1 and p */
         .service-section {
             border: #003366;
             padding: 40px 0;
@@ -88,6 +101,7 @@
             line-height: 1.6;
             margin-left: 30%;
         }
+        /* Keyframes for h1 slide-in animation */
         @keyframes h1-slidein {
             from {
                 margin-left: 100%;
@@ -99,6 +113,7 @@
                 width: 100%;
             }
         }
+        /* Keyframes for paragraph slide-in animation */
         @keyframes p-slidein {
             from {
                 margin-left: 100%;
@@ -110,6 +125,7 @@
                 width: 100%;
             }
         }
+        /* Grid layout for services: Two columns, gap, and block size */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -119,6 +135,7 @@
             margin-left: 120px;
             padding: 40px;
         }
+        /* Service card styling: Border, border-radius, padding, text alignment, cursor, and background gradient */
         .service-card {
             border: 1px solid #ccc;
             border-radius: 20px;
@@ -127,82 +144,6 @@
             cursor: pointer;
             background: linear-gradient(to bottom, #003366 5%, white 5%);
         }
+        /* Hover effect for service cards */
         .service-card:hover {
-            background-color: #f0f0f0;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-        .service-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        .service-card p {
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-top: 50px;
-            font-size: 1.25rem;
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
-    <header>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html" >Home</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./Staff.html">Staff</a></li>
-                <li><a href="./GeneralDentalServices.html" class="active">General Dental Services</a></li>
-                <li><a href="./price.html">Costs & Affordability</a></li>
-            </ul>
-        </nav>
-        
-    </header>
-    
-    <main>
-        <section>
-            <div class="service-header">
-                <h1>General Services</h1>
-            </div>
-        </seciton>
-        <section>
-            <div class="service-section">       
-                <h1>Welcome to Dandan Dental</h1>
-                <p>We provide every service needed for healthy oral.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h2>Cleaning</h2>
-                    <img src="../images/Cleaning.jpg" width="400" height="300">
-                    <p>Professional dental cleaning to remove plaque, tartar, and stains, promoting healthy gums and a bright smile.</p>
-                </div>
-                <div class="service-card">
-                    <h2>Checkup</h2>
-                    <img src="../images/Checkup.jpg" width="400" height="300">
-                    <p>Comprehensive dental checkup including examinations, X-rays, and preventive care to maintain oral health.</p>
-                </div>
-                <div class="service-card">
-                    <h2>Implants</h2>
-                    <img src="../images/Implants.jpg" width="400" height="300">
-                    <p>Dental implants for a natural-looking and durable solution to replace missing teeth and restore your smile.</p>
-                </div>
-                <div class="service-card">
-                    <h2>Wisdom Teeth</h2>
-                    <img src="../images/WisdomTeeth.jpg" width="400" height="300">
-                    <p>Extraction and management of wisdom teeth to prevent potential issues and ensure oral health.</p>
-                </div>
-                <div class="service-card">
-                    <h2>Align</h2>
-                    <img src="../images/Align.jpg" width="400" height="300">
-                    <p>Orthodontic treatments, including braces and clear aligners, to straighten teeth and improve bite alignment.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+            background-color: #f0
