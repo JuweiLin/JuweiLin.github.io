@@ -4,188 +4,163 @@
     <meta charset="UTF-8">
     <title>About Us</title>
     <style>
-        /* Sets the background color and text alignment for the header, 
-           positions it at the top of the viewport, and ensures it stays there as the user scrolls. */
+        /* Styles for the header, making it fixed to the top with a specific background color */
         header {
-            background-color: #003366; /* Dark blue background */
-            padding: 30px 0; /* Padding above and below the text */
-            text-align: center; /* Centers the text horizontally */
-            position: fixed;  /* Fixed position at the top */
-            width: 100%; /* Full width */
-            top: 0; /* Aligns to the top of the viewport */
-            left: 0; /* Aligns to the left of the viewport */
-            z-index: 1000; /* Ensures the header is above other content */
+            background-color: #003366;
+            padding: 30px 0;
+            text-align: center;
+            position: fixed; 
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
-
-        /* Applies top padding to the body to prevent content from hiding under the fixed header, 
-           and sets a sans-serif font for the whole page. */
+        /* Body style to provide padding at the top to account for the fixed header */
         body {
-            padding-top: 70px; /* Padding at the top to offset the fixed header */
-            font-family: 'Open Sans', sans-serif; /* Font family for the page */
+            padding-top: 70px;
+            font-family: 'Open Sans', sans-serif;
         }
-
-        /* Styles the footer with a background color, text color, and center alignment. */
+        /* Footer styling with a background color and text styling */
         footer {
-            background-color: #003366; /* Dark blue background */
-            color: white; /* Text color */
-            text-align: center; /* Centers the text horizontally */
-            padding: 15px 0; /* Padding above and below the text */
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
         }
-
-        /* Lightens the color of the text in the footer to a grey tone. */
+        /* Lighter color for the text in the footer */
         footer p {
-            font-size: 16px; /* Font size */
-            font-weight: 400; /* Font weight */
-            color: #666666; /* Grey text color */
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
         }
-
-        /* Styles for the navigation paragraph, setting font size and bottom margin. */
+        /* Styling for navigation text and list */
         nav p{
-            font-size: 20px; /* Font size */
-            font-weight: 400; /* Font weight */
-            margin-bottom: 30px; /* Space below the paragraph */
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 30px;
         }
-
-        /* Removes list styles, applies a flex display to lay out navigation items in a row, and aligns them to the right. */
+        /* Removing list styles and adding flexbox for horizontal layout */
         nav ul {
-            list-style: none; /* Removes bullet points */
-            padding: 0; /* Removes padding */
-            margin: 0; /* Removes margin */
-            display: flex; /* Flex display to lay out items in a row */
-            justify-content: right; /* Aligns navigation items to the right */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
         }
-
-        /* Displays each navigation item as an inline element with spacing to the right. */
+        /* Inline-block for list items with margin for spacing */
         nav ul li {
-            display: inline-block; /* Displays list items inline */
-            margin-right: 40px; /* Spacing between navigation items */
+            display: inline-block;
+            margin-right: 40px;
         }
-
-        /* Removes underline from links, sets font size and weight, and sets the color to white. */
+        /* Styling for navigation links, including color and removing text-decoration */
         nav ul li a {
-            text-decoration: none; /* Removes underline */
-            font-size: 1rem; /* Font size */
-            font-weight: 600; /* Font weight */
-            color: #ffffff; /* White text color */
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
         }
-
-        /* Changes color of navigation links on hover for visual feedback. */
+        /* Hover effect for navigation links */
         nav ul li a:hover {
-            color: #ffffff; /* Maintains the white color on hover */
+            color: #ffffff;
         }
-
-        /* Styles the active navigation link to indicate the current page, with a bottom border for emphasis. */
+        /* Style for the active navigation link */
         nav ul li a.active {
-            border-bottom: 3px solid white; /* White border at the bottom */
-            color: white; /* White text color */
+            border-bottom: 3px solid white;
+            color: white;
         }
-
-        /* Centers the header text within the About section and sets its color. */
+        /* Header within the About section */
         .about-us-header {
-            text-align: center; /* Centers the text horizontally */
-            padding: 2px 0; /* Small padding above and below the text */
-            color: #003366; /* Dark blue text color */
+            text-align: center;
+            padding: 2px 0;
+            color: #003366;
         }
-
-        /* Sets the size of the main title in the About section. */
+        /* Styling for the main title in the About section */
         .about-us-header h1 {
-            font-size: 2rem; /* Large font size for the title */
+            font-size: 2rem;
         }
-
-        /* Styles the About section with padding and a top border. */
+        /* Styling for the About section, including padding and border color */
         .about-section {
-            border-top: 5px solid #003366; /* Dark blue top border */
-            padding: 40px 0; /* Padding above and below the content */
+            border: #003366;
+            padding: 40px 0;
         }
-
-        /* Applies an animation to the heading in the About section to slide in from the right. */
+        /* Animations for headings and paragraphs in the About section */
         .about-section h1 {
-            animation-duration: 3s; /* Animation lasts 3 seconds */
-            animation-name: h1-slidein; /* Uses the slide-in animation defined below */
-            font-size: 2.5rem; /* Font size for the heading */
-            color: #003366; /* Dark blue text color */
-            margin-bottom: 20px; /* Space below the heading */
-            margin-left: 20%; /* Indentation from the left */
+            animation-duration: 3s;
+            animation-name: h1-slidein;
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 20px;
+            margin-left: 20%;
         }
-
-        /* Applies an animation to the paragraph in the About section to slide in from the right. */
         .about-section p {
-            animation-duration: 3s; /* Animation lasts 3 seconds */
-            animation-name: p-slidein; /* Uses the slide-in animation defined below */
-            color: #003366ee; /* Dark blue text color with slight transparency */
-            font-size: 2rem; /* Large font size for the paragraph */
-            line-height: 1.6; /* Line height for readability */
-            margin-left: 30%; /* Indentation from the left */
+            animation-duration: 3s;
+            animation-name: p-slidein;
+            color: #003366ee;
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-left: 30%;
         }
-
-        /* Keyframes for the slide-in animation of the heading. */
+        /* Keyframes for slide-in animations */
         @keyframes h1-slidein {
             from {
-                margin-left: 100%; /* Starts off-screen to the right */
-                width: 300%; /* Initial width before entering */
+                margin-left: 100%;
+                width: 300%;
             }
-
             to {
-                margin-left: 20%; /* Final position with indentation from the left */
-                width: 100%; /* Final width after entering */
+                margin-left: 20%;
+                width: 100%;
             }
         }
-
-        /* Keyframes for the slide-in animation of the paragraph. */
         @keyframes p-slidein {
             from {
-                margin-left: 100%; /* Starts off-screen to the right */
-                width: 300%; /* Initial width before entering */
+                margin-left: 100%;
+                width: 300%;
             }
-
             to {
-                margin-left: 30%; /* Final position with indentation from the left */
-                width: 100%; /* Final width after entering */
+                margin-left: 30%;
+                width: 100%;
             }
         }
-
-        /* Sets up a grid layout for the About cards, with a two-column layout and gap between them. */
+        /* Grid layout for the About cards */
         .about-grid {
-            display: grid; /* Uses CSS Grid for layout */
-            grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
-            gap: 20px; /* Space between grid items */
-            margin: 40px 120px; /* Margin around the entire grid */
-            padding: 40px; /* Padding inside each grid item */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            block-size: 500px, 500px;  
+            margin-right: 120px;
+            margin-left: 120px;
+            padding: 40px;
         }
-
-        /* Styles the individual About cards with a border, padding, and hover effect. */
+        /* Styling for each About card, including hover effects */
         .about-card {
-            border: 1px solid #ccc; /* Light grey border */
-            border-radius: 20px; /* Rounded corners */
-            padding: 20px; /* Padding inside the card */
-            text-align: center; /* Centers the text horizontally */
-            cursor: pointer; /* Changes the cursor to a pointer on hover */
-            background: linear-gradient(to bottom, #003366 5%, white 95%); /* Gradient background from dark blue to white */
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background: linear-gradient(to bottom, #003366 5%, white 5%);
         }
-
-        /* Changes the background color of About cards on hover. */
         .about-card:hover {
-            background-color: #f0f0f0; /* Light grey background on hover */
+            background-color: #f0f0f0;
         }
-
-        /* Sets the size and margin of the title within About cards. */
+        /* Styling for headings within About cards */
         .about-card h2 {
-            font-size: 1.5rem; /* Font size for card titles */
-            margin-bottom: 20px; /* Space below the title */
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
-
-        /* Styles the paragraph text within About cards, including margin and font size. */
+        /* Styling for text within About cards */
         .about-card p {
-            margin: 50px 100px; /* Margin around the text for proper spacing */
-            font-size: 1.25rem; /* Font size for the paragraph */
-            line-height: 1.6; /* Line height for readability */
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            font-size: 1.25rem;
+            line-height: 1.6;
         }
-
     </style>
 </head>
 <body>
     <header>
-        <!-- Navigation bar with links to main sections -->
+        <!-- Navigation bar with links to the main sections of the site -->
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -197,43 +172,49 @@
         </nav>
     </header>
     <main>
-        <!-- About Us header section -->
-        <section class="about-us-header">
-            <h1>About Us</h1>
+        <!-- Section for the About Us header -->
+        <section>
+            <div class="about-us-header">
+                <h1>About Us</h1>
+            </div>
         </section>
-        <!-- Welcome message section -->
-        <section class="about-section">       
-            <h1>Welcome to Dandan Dental</h1>
-            <p>We prioritize your smile and comfort.</p>
+        <!-- Section for the welcome message -->
+        <section>
+            <div class="about-section">       
+                <h1>Welcome to Dandan Dental</h1>
+                <p>We prioritize your smile and comfort.</p>
+            </div>
         </section>
-        <!-- Grid layout for About details -->
-        <section class="about-grid">
-            <!-- Card for team introduction with video -->
-            <div class="about-card">
-                <h2>Meet Our Team</h2>
-                <video width="400" height="300" controls>
-                    <source src="../images/8-bit.mp4" type="video/mp4">
-                </video>
-            </div>
-            <!-- Card for clinic history -->
-            <div class="about-card">
-                <h2>Our History</h2>
-                <p>Since our establishment in 1995, Dandan Dental has been serving the Wenzhou community with dedication and care.</p>
-            </div>
-            <!-- Card for facility showcase -->
-            <div class="about-card">
-                <h2>Our Facility</h2>
-                <img src="../images/Facility.jpg" alt="Our modern dental clinic" width="400" height="300">
-            </div>
-            <!-- Card for team photo -->
-            <div class="about-card">
-                <h2>Our Team</h2>
-                <img src="../images/ourteam.jpg" alt="Our friendly staff" width="400" height="300">
+        <!-- Grid layout section for About cards -->
+        <section>
+            <div class="about-grid">
+                <!-- Card for team introduction with a video -->
+                <div class="about-card">
+                    <h2>Meet Our Team</h2>
+                    <video width="400" height="300" controls>
+                        <source src="../images/8-bit.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Card for clinic history -->
+                <div class="about-card">
+                    <h2>Our History</h2>
+                    <p>Since our establishment in 1995, <br>Dandan Dental has been serving the Wenzhou community with dedication and care.</p>
+                </div>
+                <!-- Card for clinic facility with an image -->
+                <div class="about-card">
+                    <h2>Our Facility</h2>
+                    <img src="../images/Facility.jpg" alt="Our modern dental clinic" width="400" height="300">
+                </div>
+                <!-- Card for team introduction with an image -->
+                <div class="about-card">
+                    <h2>Our Team</h2>
+                    <img src="../images/ourteam.jpg" alt="Our friendly staff" width="400" height="300">
+                </div>
             </div>
         </section>
     </main>
-    <!-- Footer section -->
     <footer>
+        <!-- Footer with copyright notice -->
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
 </body>
