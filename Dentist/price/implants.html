@@ -1,86 +1,104 @@
 <!DOCTYPE html>
+<!-- Declaration that this document is an HTML5 document -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tag for setting the character encoding for the HTML document -->
     <title>Dental Implants - Dandan Dental</title>
+    <!-- Title of the web page, shown in the browser tab -->
+
     <style>
+        /* CSS styles for various elements in the page */
+
+        /* Styling for the body element */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif; /* Set font to Arial */
+            background-color: #f4f4f4; /* Light gray background color */
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
         }
 
+        /* Styling for header and footer */
         header, footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+            background-color: #003366; /* Dark blue background color */
+            color: white; /* White text color */
+            text-align: center; /* Center text alignment */
+            padding: 15px 0; /* Padding above and below */
         }
 
+        /* Padding for the main content area */
         main {
-            padding: 20px;
+            padding: 20px; /* Apply padding around the main content */
         }
 
+        /* Styling for service sections */
         .service-section {
-            background-color: white;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            max-width: 800px;
+            background-color: white; /* White background for sections */
+            margin: 20px auto; /* Auto margin for horizontal centering, 20px margin top and bottom */
+            padding: 20px; /* Padding inside the sections */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 10px; /* Rounded corners for the border */
+            max-width: 800px; /* Maximum width of section */
         }
 
+        /* Styling for headings in service sections */
         .service-section h2 {
-            color: #003366;
-            font-size: 2rem;
+            color: #003366; /* Dark blue color for heading */
+            font-size: 2rem; /* Font size for heading */
         }
 
+        /* Styling for paragraphs in service sections */
         .service-section p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1rem; /* Font size for paragraph */
+            line-height: 1.6; /* Line height for paragraph */
         }
 
+        /* Styling for the precautions section */
         .precautions {
-            margin-top: 20px;
+            margin-top: 20px; /* Top margin for the section */
         }
 
+        /* Responsive design: Adjust service section margin for smaller screens */
         @media (max-width: 768px) {
             .service-section {
-                margin: 20px;
+                margin: 20px; /* Margin adjustment for smaller screens */
             }
         }
 
+        /* Styling for the back button */
         .back-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #003366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+            display: inline-block; /* Inline block display for layout */
+            margin: 10px; /* Margin around the button */
+            padding: 8px 15px; /* Padding inside the button */
+            background-color: #003366; /* Dark blue background color */
+            color: white; /* White text color */
+            text-decoration: none; /* No text decoration (underline) */
+            border-radius: 5px; /* Rounded corners for the button */
+            cursor: pointer; /* Cursor changes to pointer to indicate clickable */
         }
 
+        /* Hover effect for the back button */
         .back-button:hover {
-            background-color: #002244;
+            background-color: #002244; /* Darker blue color on hover */
         }
-
     </style>
 </head>
 <body>
     <header>
-        <h1>Dandan Dental</h1>
-        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+        <!-- Header section containing the site name and back button -->
+        <h1>Dandan Dental</h1> <!-- Site title -->
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a> <!-- Back button with an onclick event to trigger the goBack() function -->
     </header>
 
     <main>
+        <!-- Main content of the page -->
         <section class="service-section">
-            <h2>Dental Implants</h2>
+            <!-- Section for dental implants service description -->
+            <h2>Dental Implants</h2> <!-- Section heading -->
             <p>Dental implants are a modern and effective solution for individuals with missing teeth. The procedure involves the surgical placement of titanium posts into the jawbone, which serve as sturdy anchors for artificial teeth. Here's a more in-depth look at the benefits and considerations:</p>
             
-            <h3>Benefits of Dental Implants:</h3>
-            <ul>
+            <h3>Benefits of Dental Implants:</h3> <!-- Subheading for benefits -->
+            <ul> <!-- Unordered list for benefits -->
                 <li><strong>Natural Look and Feel:</strong> Dental implants closely resemble natural teeth in both appearance and function, providing a seamless and aesthetically pleasing result.</li>
                 <li><strong>Permanent Solution:</strong> Unlike removable dentures, dental implants are a permanent solution for missing teeth. They can last a lifetime with proper care.</li>
                 <li><strong>Preservation of Jawbone:</strong> Implants stimulate the jawbone, preventing bone loss that often occurs with missing teeth. This helps maintain facial structure and overall oral health.</li>
@@ -88,28 +106,33 @@
             </ul>
 
             <div class="precautions">
-                <h3>Precautions and Considerations:</h3>
+                <!-- Section for precautions and considerations -->
+                <h3>Precautions and Considerations:</h3> <!-- Subheading for precautions -->
                 <p>While dental implants are a highly successful and widely accepted procedure, certain factors need consideration:</p>
-                <ul>
+                 <!-- Introductory paragraph for this section -->
+                <ul> <!-- Unordered list for precautions -->
                     <li><strong>Candidacy:</strong> Not everyone is an ideal candidate for dental implants. A comprehensive examination, including assessment of bone density, is crucial for determining suitability.</li>
                     <li><strong>Medical Conditions:</strong> Individuals with uncontrolled diabetes, autoimmune disorders, or other significant medical conditions may require additional precautions. Consultation with a healthcare provider is advised.</li>
                     <li><strong>Oral Hygiene:</strong> Maintaining excellent oral hygiene is essential for the success of dental implants. Regular dental check-ups, proper brushing, and flossing are key components of post-implant care.</li>
                     <li><strong>Smoking:</strong> Smoking can negatively impact the healing process and success of dental implants. Quitting smoking is recommended before undergoing the procedure.</li>
+                    <!-- List items for various precautions and considerations -->
                 </ul>
             </div>
 
-            <p><strong>Price: $1,500 per implant</strong></p>
-            <!-- Additional details, images, or booking links -->
+            <p><strong>Price: $1,500 per implant</strong></p> <!-- Pricing information -->
+            <!-- Placeholder for additional details, images, or booking links -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+        <!-- Footer of the page -->
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p> <!-- Copyright information -->
     </footer>
 
     <script>
+        // JavaScript function for the back button
         function goBack() {
-            window.location.href = '../price.html';
+            window.location.href = '../price.html'; // Redirects to the 'price.html' page
         }
     </script>
 </body>
