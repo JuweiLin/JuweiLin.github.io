@@ -1,91 +1,112 @@
 <!DOCTYPE html>
+<!-- HTML5 doctype declaration, ensuring that the browser knows to use HTML5 standards -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tag for specifying the character encoding as UTF-8 -->
     <title>Wisdom Teeth Services - Dandan Dental</title>
+    <!-- Title of the webpage, displayed in the browser tab -->
+
     <style>
+        /* CSS styling definitions for the webpage */
+
+        /* Styling for the body element */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif; /* Setting the font family to Arial */
+            background-color: #f4f4f4; /* Light grey background for the entire webpage */
+            margin: 0; /* Resetting default margin */
+            padding: 0; /* Resetting default padding */
         }
 
+        /* Styling for header and footer sections */
         header, footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+            background-color: #003366; /* Dark blue background color */
+            color: white; /* White text color */
+            text-align: center; /* Center-aligning text */
+            padding: 15px 0; /* Vertical padding */
         }
 
+        /* Styling for the main content area */
         main {
-            padding: 20px;
+            padding: 20px; /* Padding around the main content */
         }
 
+        /* Styling for service section */
         .service-section {
-            background-color: white;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            max-width: 800px;
+            background-color: white; /* White background for the section */
+            margin: 20px auto; /* Auto margin for horizontal centering, and 20px vertical margin */
+            padding: 20px; /* Padding inside the section */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 800px; /* Maximum width */
         }
 
+        /* Styling for headings within service section */
         .service-section h2 {
-            color: #003366;
-            font-size: 2rem;
+            color: #003366; /* Dark blue color for the heading */
+            font-size: 2rem; /* Font size for the heading */
         }
 
+        /* Styling for paragraphs within service section */
         .service-section p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1rem; /* Font size for paragraph */
+            line-height: 1.6; /* Line height for better readability */
         }
 
+        /* Responsive styling for smaller screens */
         @media (max-width: 768px) {
             .service-section {
-                margin: 20px;
+                margin: 20px; /* Adjusting margins for smaller screens */
             }
         }
 
+        /* Styling for the back button */
         .back-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #003366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+            display: inline-block; /* Inline-block display for proper positioning */
+            margin: 10px; /* Margin around the button */
+            padding: 8px 15px; /* Padding inside the button */
+            background-color: #003366; /* Dark blue background color */
+            color: white; /* White text color */
+            text-decoration: none; /* No underline for the text */
+            border-radius: 5px; /* Rounded corners for the button */
+            cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
         }
 
+        /* Hover effect for the back button */
         .back-button:hover {
-            background-color: #002244;
+            background-color: #002244; /* Slightly darker blue when hovered */
         }
-
     </style>
 </head>
 <body>
     <header>
-        <h1>Dandan Dental</h1>
-        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+        <!-- Header section of the webpage -->
+        <h1>Dandan Dental</h1> <!-- Main title of the website -->
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a> <!-- Back button with JavaScript onclick event for navigation -->
     </header>
 
     <main>
+        <!-- Main content area of the webpage -->
         <section class="service-section">
-            <h2>Wisdom Teeth Services</h2>
+            <!-- Section describing wisdom teeth services -->
+            <h2>Wisdom Teeth Services</h2> <!-- Heading for the service section -->
             <p>Dealing with wisdom teeth issues requires specialized care. Our experienced dental team provides comprehensive services related to wisdom teeth, including examinations, extractions, and post-operative care.</p>
-            <p><strong>Price: $250 (Extraction)</strong></p> <!-- Example price for Wisdom Teeth extraction -->
-            <!-- Additional details, images, or booking links -->
+            <!-- Description paragraph of the service -->
+            <p><strong>Price: $250 (Extraction)</strong></p> <!-- Pricing information -->
+            <!-- Placeholder for additional details, images, or booking links -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+        <!-- Footer section of the webpage -->
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p> <!-- Copyright notice -->
     </footer>
 
     <script>
+        // JavaScript function to handle the back button functionality
         function goBack() {
-            window.location.href = '../price.html';
+            window.location.href = '../price.html'; // Redirects to the 'price.html' page when clicked
         }
     </script>
 </body>
