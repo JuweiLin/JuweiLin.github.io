@@ -1,71 +1,71 @@
 <!DOCTYPE html>
-<!-- The HTML5 doctype declaration, necessary for modern web pages -->
+<!-- The HTML5 doctype declaration is used to inform the browser about the version of HTML used -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag for specifying the character encoding of the HTML document -->
+    <!-- Meta tag specifying the character encoding for the webpage -->
     <title>Meet Our Staff</title>
-    <!-- The title of the web page -->
+    <!-- Title tag indicating the title of the webpage -->
     <style>
-        /* CSS styles for various elements in the page */
+        /* CSS styles are defined here for various HTML elements */
 
         /* Header styling: fixed position, background color, padding, etc. */
         header {
-            background-color: #003366;
-            padding: 30px 0;
-            text-align: center;
-            position: fixed; 
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            background-color: #003366; /* Dark blue background color */
+            padding: 30px 0; /* Vertical padding */
+            text-align: center; /* Center alignment for text */
+            position: fixed; /* Fixed position at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Top position */
+            left: 0; /* Left position */
+            z-index: 1000; /* Z-index for layering */
         }
 
-        /* Body styling: padding-top to avoid overlap with fixed header, and font settings */
+        /* Styling for the body, adjusting padding to accommodate the fixed header */
         body {
-            padding-top: 70px;
-            font-family: 'Open Sans', sans-serif;
+            padding-top: 70px; /* Top padding */
+            font-family: 'Open Sans', sans-serif; /* Font family */
         }
 
-        /* Footer styling: background color, padding, text alignment */
+        /* Footer styling */
         footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+            background-color: #003366; /* Dark blue background color */
+            color: white; /* Text color */
+            text-align: center; /* Center alignment for text */
+            padding: 15px 0; /* Vertical padding */
         }
 
-        /* Navigation bar styling: font size, weight, margin, etc. */
+        /* Navigation bar styling */
         nav p {
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 30px;
+            font-size: 20px; /* Font size */
+            font-weight: 400; /* Font weight */
+            margin-bottom: 30px; /* Bottom margin */
         }
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: right;
+            list-style: none; /* No bullet points */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
+            display: flex; /* Flexbox for alignment */
+            justify-content: right; /* Right alignment */
         }
         nav ul li {
-            display: inline-block;
-            margin-right: 40px;
+            display: inline-block; /* Display list items inline */
+            margin-right: 40px; /* Right margin */
         }
         nav ul li a {
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
+            text-decoration: none; /* No text decoration */
+            font-size: 1rem; /* Font size */
+            font-weight: 600; /* Font weight */
+            color: #ffffff; /* Text color */
         }
         /* Hover effect for navigation links */
         nav ul li a:hover {
-            color: #ffffff;
+            color: #ffffff; /* Text color on hover */
         }
         /* Styling for the active navigation link */
         nav ul li a.active {
-            border-bottom: 3px solid white;
-            color: white;
+            border-bottom: 3px solid white; /* Bottom border */
+            color: white; /* Text color */
         }
 
         /* Staff header styling */
@@ -137,37 +137,45 @@
             font-size: 1.25rem;
             line-height: 1.6;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <!-- Navigation bar with links to different pages -->
+        <!-- Header of the page containing the navigation bar -->
         <nav>
+            <!-- Navigation bar with list of links -->
             <ul>
-               <li><a href="../index.html" >Home</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./Staff.html" class="active">Staff</a></li>
-                <li><a href="./GeneralDentalServices.html">General Dental Services</a></li>
-                <li><a href="./price.html">Costs & Affordability</a></li>
+                <!-- Unordered list for navigation items -->
+                <li><a href="../index.html">Home</a></li> <!-- Link to the home page -->
+                <li><a href="./About.html">About</a></li> <!-- Link to the about page -->
+                <li><a href="./Staff.html" class="active">Staff</a></li> <!-- Link to the staff page, marked as active -->
+                <li><a href="./GeneralDentalServices.html">General Dental Services</a></li> <!-- Link to the general dental services page -->
+                <li><a href="./price.html">Costs & Affordability</a></li> <!-- Link to the costs and affordability page -->
             </ul>
         </nav>
-        
     </header>
     
     <main>
+        <!-- Main content of the webpage -->
         <section>
+            <!-- Section for the staff header -->
             <div class="staff-header">
-                <h1>Meet Our Staff</h1>
+                <h1>Meet Our Staff</h1> <!-- Title of the section -->
             </div>
-        </seciton>
+        </section>
         <section>
+            <!-- Section containing information about the staff and services -->
             <div class="staff-section">       
-                <h1>Welcome to Dandan Dental</h1>
-                <p>where you will be treated by the finest and most experienced dentist.</p>
+                <h1>Welcome to Dandan Dental</h1> <!-- Welcome message -->
+                <p>where you will be treated by the finest and most experienced dentist.</p> <!-- Description or slogan -->
             </div>
+        </section>
         <section>
             <div class="staff-grid">
-                <!-- Each card represents a staff member -->
+                <!-- Grid layout for staff cards -->
+                <!-- Each 'div' with class 'staff-card' represents a card for a staff member -->
+                <!-- Each card contains a heading, image, and description about the staff member -->
                 <div class="staff-card">
                     <h2>Dr. Emily Johnson</h2>
                     <p>General Dentist</p>
@@ -221,7 +229,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
+        <!-- Footer of the page -->
+        <p>&copy; 2023 Dandan Dental. All rights reserved.</p> <!-- Copyright notice -->
     </footer>
 
 </body>
