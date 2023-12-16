@@ -4,150 +4,170 @@
     <meta charset="UTF-8">
     <title>Dental Check-Up Services - Dandan Dental</title>
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-    }
-
-    header, footer {
-        background-color: #003366;
-        color: white;
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    .teeth-image-container {
-        text-align: center;
-        margin: 20px auto;
-    }
-
-    .teeth-image-container img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .selected-teeth-container {
-        margin: 20px auto;
-        padding: 20px;
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        max-width: 800px;
-        text-align: center;
-    }
-
-    .selected-teeth-list {
-        margin-top: 20px;
-    }
-
-    .selected-tooth {
-        display: inline-block;
-        margin: 5px;
-        padding: 5px 10px;
-        background-color: #e6e6e6;
-        border-radius: 5px;
-    }
-
-    .back-button {
-        display: inline-block;
-        margin: 10px;
-        padding: 8px 15px;
-        background-color: #003366;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .back-button:hover {
-        background-color: #002244;
-    }
-
-    .instructions {
-        text-align: center;
-        margin: 20px;
-        font-size: 1.2rem;
-    }
-
-    .faq-container {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .faq-dropdown {
-        padding: 10px;
-        margin: 10px;
-    }
-
-    .tooth-container {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .tooth-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .tooth-number {
-        font-weight: bold;
-        color: #003366;
-    }
-
-    .remove-tooth-btn {
-        border: none;
-        background-color: #ff4d4d;
-        color: white;
-        border-radius: 15px;
-        cursor: pointer;
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-
-    .remove-tooth-btn:hover {
-        background-color: #ff3333;
-    }
-
-    .tooth-faq-dropdown {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .total-price-container {
-        margin: 20px auto;
-        padding: 20px;
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        max-width: 800px;
-        text-align: center;
-    }
-
-    @media (max-width: 768px) {
-        .selected-teeth-container,
-        .total-price-container {
-            width: auto;
-            margin: 20px;
+        /* Set the font family, background color, margin, and padding for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-    }
 
+        /* Style the header and footer with background color, text color, and center alignment */
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
 
+        /* Add padding to the main content area */
+        main {
+            padding: 20px;
+        }
+
+        /* Center align the teeth image container and set margin */
+        .teeth-image-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        /* Set the maximum width for the teeth image and ensure it scales proportionally */
+        .teeth-image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style the container for selected teeth with margin, padding, background color, border, border radius, and center alignment */
+        .selected-teeth-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Set margin for the selected teeth list */
+        .selected-teeth-list {
+            margin-top: 20px;
+        }
+
+        /* Style each selected tooth with display, margin, padding, background color, and border radius */
+        .selected-tooth {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
+        }
+
+        /* Style the back button with display, margin, padding, background color, text color, text decoration, border radius, and cursor */
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 8px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Change the background color of the back button on hover */
+        .back-button:hover {
+            background-color: #002244;
+        }
+
+        /* Style the instructions with text alignment, margin, and font size */
+        .instructions {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Style the FAQ container with margin and text alignment */
+        .faq-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Style the FAQ dropdown with padding and margin */
+        .faq-dropdown {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Style the tooth container with background color, border radius, box shadow, padding, and margin */
+        .tooth-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style the tooth info with flexbox, space between alignment, and margin bottom */
+        .tooth-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* Style the tooth number with font weight, color, and text color */
+        .tooth-number {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        /* Style the remove tooth button with border, background color, text color, border radius, cursor, padding, and font size */
+        .remove-tooth-btn {
+            border: none;
+            background-color: #ff4d4d;
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        /* Change the background color of the remove tooth button on hover */
+        .remove-tooth-btn:hover {
+            background-color: #ff3333;
+        }
+
+        /* Style the tooth FAQ dropdown with width, padding, margin top, border radius, border, and box shadow */
+        .tooth-faq-dropdown {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Style the total price container with margin, padding, background color, border, border radius, max width, and text alignment */
+        .total-price-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            /* Adjust the width and margin of the selected teeth container and total price container */
+            .selected-teeth-container,
+            .total-price-container {
+                width: auto;
+                margin: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -235,89 +255,103 @@
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
 
+    </body>
+    </html>
+
     <script>
+        // Array to store the selected teeth
         var selectedTeeth = [];
-         var pricePerTooth = 50; // Adjust the price per tooth as needed
-         var additionalServices = {
-             'Extraction': 20,
-             'Filling': 30,
-             // Add more services and their prices here
-         };
-     
-         function updateFAQDropdown(toothIndex) {
-             var faqDropdown = document.getElementById('faq-dropdown-' + toothIndex);
-             if (faqDropdown) {
-                 faqDropdown.innerHTML = '';
-                 for (var service in additionalServices) {
-                     var option = document.createElement('option');
-                     option.value = additionalServices[service];
-                     option.textContent = service + ' - $' + additionalServices[service];
-                     faqDropdown.appendChild(option);
-                 }
-             }
-         }
-     
-         function selectTooth(toothIndex) {
-             if (!selectedTeeth.includes(toothIndex)) {
-                 selectedTeeth.push(toothIndex);
-                 updateSelectedTeethList();
-                 updateTotalPrice();
-             } else {
-                 alert('Tooth ' + toothIndex + ' is already selected.');
-             }
-         }
-     
-         function updateSelectedTeethList() {
-             var listElement = document.getElementById('selected-teeth-list');
-             listElement.innerHTML = '';
-     
-             selectedTeeth.forEach(function(tooth) {
-                 var toothElement = document.createElement('div');
-                 toothElement.classList.add('selected-tooth');
-                 toothElement.id = 'tooth-' + tooth;
-     
-                 var toothNumberSpan = document.createElement('span');
-                 toothNumberSpan.textContent = 'Tooth ' + tooth;
-     
-                 var removeButton = document.createElement('button');
-                 removeButton.textContent = '✖';
-                 removeButton.onclick = function() { removeTooth(tooth); };
-     
-                 var faqDropdown = document.createElement('select');
-                 faqDropdown.id = 'faq-dropdown-' + tooth;
-                 faqDropdown.onchange = updateTotalPrice;
-     
-                 toothElement.appendChild(toothNumberSpan);
-                 toothElement.appendChild(removeButton);
-                 toothElement.appendChild(faqDropdown);
-                 listElement.appendChild(toothElement);
-     
-                 updateFAQDropdown(tooth);
-             });
-         }
-     
-         function removeTooth(toothIndex) {
-             selectedTeeth = selectedTeeth.filter(function(tooth) {
-                 return tooth !== toothIndex;
-             });
-             updateSelectedTeethList();
-             updateTotalPrice();
-         }
-     
-         function updateTotalPrice() {
-             var totalPrice = selectedTeeth.length * pricePerTooth;
-             selectedTeeth.forEach(function(tooth) {
-                 var faqDropdown = document.getElementById('faq-dropdown-' + tooth);
-                 if (faqDropdown) {
-                     totalPrice += parseFloat(faqDropdown.value);
-                 }
-             });
-             document.getElementById('total-price').textContent = '$' + totalPrice.toFixed(2);
-         }
-     
-         function goBack() {
-             window.location.href = '../price.html';
-         }
-     </script>
+        
+        // Price per tooth
+        var pricePerTooth = 50; // Adjust the price per tooth as needed
+        
+        // Additional services and their prices
+        var additionalServices = {
+            'Extraction': 20,
+            'Filling': 30,
+            // Add more services and their prices here
+        };
+
+        // Function to update the FAQ dropdown based on tooth selection
+        function updateFAQDropdown(toothIndex) {// Function to update the FAQ dropdown based on tooth selection
+            var faqDropdown = document.getElementById('faq-dropdown-' + toothIndex);// Get the FAQ dropdown for the selected tooth
+            if (faqDropdown) {// If the FAQ dropdown exists
+                faqDropdown.innerHTML = '';// Clear the FAQ dropdown
+                for (var service in additionalServices) {// Loop through the additional services
+                    var option = document.createElement('option');// Create an option element
+                    option.value = additionalServices[service];// Set the value of the option to the price of the service
+                    option.textContent = service + ' - $' + additionalServices[service];// Set the text of the option to the name of the service and its price
+                    faqDropdown.appendChild(option);// Add the option to the FAQ dropdown
+                }
+            }
+        }
+
+        // Function to select a tooth
+        function selectTooth(toothIndex) {// Function to select a tooth
+            if (!selectedTeeth.includes(toothIndex)) {// If the tooth is not already selected
+                selectedTeeth.push(toothIndex);// Add the tooth to the selected teeth array
+                updateSelectedTeethList();// Update the list of selected teeth
+                updateTotalPrice();// Update the total price
+            } else {
+                alert('Tooth ' + toothIndex + ' is already selected.');// Alert the user that the tooth is already selected
+            }
+        }
+
+        // Function to update the list of selected teeth
+        function updateSelectedTeethList() {// Function to update the list of selected teeth
+            var listElement = document.getElementById('selected-teeth-list');// Get the list element
+            listElement.innerHTML = '';// Clear the list element
+
+            selectedTeeth.forEach(function(tooth) {// Loop through the selected teeth
+                var toothElement = document.createElement('div');// Create a div element for the tooth
+                toothElement.classList.add('selected-tooth');// Add the selected-tooth class to the div
+                toothElement.id = 'tooth-' + tooth;// Set the id of the div to tooth-<tooth number>
+
+                var toothNumberSpan = document.createElement('span');// Create a span element for the tooth number
+                toothNumberSpan.textContent = 'Tooth ' + tooth;// Set the text of the span to Tooth <tooth number>
+
+                var removeButton = document.createElement('button');// Create a button element to remove the tooth
+                removeButton.textContent = '✖';// Set the text of the button to ✖
+                removeButton.onclick = function() { removeTooth(tooth); };// Set the onclick event of the button to remove the tooth
+
+                var faqDropdown = document.createElement('select');// Create a select element for the FAQ dropdown
+                faqDropdown.id = 'faq-dropdown-' + tooth;// Set the id of the select to faq-dropdown-<tooth number>
+                faqDropdown.onchange = updateTotalPrice;// Set the onchange event of the select to update the total price
+
+                toothElement.appendChild(toothNumberSpan);// Add the tooth number span to the tooth div
+                toothElement.appendChild(removeButton);// Add the remove button to the tooth div
+                toothElement.appendChild(faqDropdown);// Add the FAQ dropdown to the tooth div
+                listElement.appendChild(toothElement);// Add the tooth div to the list element
+
+                updateFAQDropdown(tooth);// Update the FAQ dropdown for the tooth
+            });
+        }
+
+        // Function to remove a selected tooth
+        function removeTooth(toothIndex) {// Function to remove a selected tooth
+            selectedTeeth = selectedTeeth.filter(function(tooth) {// Filter the selected teeth array to remove the tooth
+                return tooth !== toothIndex;// Return true if the tooth is not the tooth to be removed
+            });
+            updateSelectedTeethList();// Update the list of selected teeth
+            updateTotalPrice();// Update the total price
+        }
+
+        // Function to update the total price
+        function updateTotalPrice() {// Function to update the total price
+            var totalPrice = selectedTeeth.length * pricePerTooth;// Calculate the total price based on the number of selected teeth and the price per tooth   
+            selectedTeeth.forEach(function(tooth) {// Loop through the selected teeth
+                var faqDropdown = document.getElementById('faq-dropdown-' + tooth);// Get the FAQ dropdown for the tooth
+                if (faqDropdown) {// If the FAQ dropdown exists
+                    totalPrice += parseFloat(faqDropdown.value);// Add the price of the selected service to the total price
+                }
+            });
+            document.getElementById('total-price').textContent = '$' + totalPrice.toFixed(2);// Set the text of the total price to the total price
+        }
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.location.href = '../price.html';// Go back to the previous page
+        }
+    </script>
 </body>
 </html>
