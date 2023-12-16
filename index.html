@@ -4,137 +4,137 @@
     <meta charset="UTF-8">
     <title>Dentists in Wenzhou, Zhejiang Province, China</title>
     <style>
-        /* Styles for the header section */
+        /* Header styles */
         header {
-            background-color: #003366;
-            padding: 30px 0;
-            text-align: center;
-            position: fixed; 
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            background-color: #003366; /* Dark blue background for header */
+            padding: 30px 0; /* Vertical padding */
+            text-align: center; /* Center aligning the text */
+            position: fixed; /* Fixed position to stay at top during scroll */
+            width: 100%; /* Full width */
+            top: 0; /* Align to top of the page */
+            left: 0; /* Align to left of the page */
+            z-index: 1000; /* High z-index to keep it above other content */
         }
 
-        /* Styles for the body section */
+        /* Body styles */
         body {
-            padding-top: 70px;
-            font-family: 'Open Sans', sans-serif;
+            padding-top: 70px; /* Padding to push content down below fixed header */
+            font-family: 'Open Sans', sans-serif; /* Font family for the body */
         }
 
-        /* Styles for the navigation section */
+        /* Navigation styles */
         nav p{
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 30px;
+            font-size: 20px; /* Font size for paragraph in navigation */
+            font-weight: 400; /* Font weight for paragraph */
+            margin-bottom: 30px; /* Bottom margin */
         }
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: right;
+            list-style: none; /* Removing bullet points from list */
+            padding: 0; /* No padding */
+            margin: 0; /* No margin */
+            display: flex; /* Flex display for horizontal layout */
+            justify-content: right; /* Align items to the right */
         }
         nav ul li {
-            display: inline-block;
-            margin-right: 40px;
+            display: inline-block; /* Display list items in a line */
+            margin-right: 40px; /* Margin between list items */
         }
         nav ul li a {
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
+            text-decoration: none; /* No underline on links */
+            font-size: 1rem; /* Font size for links */
+            font-weight: 600; /* Font weight for links */
+            color: #ffffff; /* White color text for links */
         }
         nav ul li a:hover {
-            color: #ffffff;
+            color: #ffffff; /* White text on hover */
         }
         nav ul li a.active {
-            border-bottom: 3px solid white;
-            color: white;
+            border-bottom: 3px solid white; /* White border for active link */
+            color: white; /* White text for active link */
         }
 
-        /* Styles for the button section */
+        /* Button styles */
         .button {
-            display: inline-block;
-            padding: 20px 25px;
-            background-color: #0066cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 40px;
-            cursor: pointer;
-            margin-inline : 80px;
+            display: inline-block; /* Display buttons inline */
+            padding: 20px 25px; /* Padding around the text */
+            background-color: #0066cc; /* Blue background for buttons */
+            color: white; /* White text for buttons */
+            text-decoration: none; /* No underline */
+            border-radius: 40px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin-inline: 80px; /* Horizontal margin */
         }
         .button:hover {
-            background-color: #0052a3;
+            background-color: #0052a3; /* Darker blue on hover */
         }
 
-        /* Styles for the hero section */
+        /* Hero section styles */
         .hero-section {
-            background: url('./images/Homepage.jpeg') no-repeat center center;
-            background-size: cover;
-            padding: 480px 0;
-            color: #f2f2f2;
-            text-align: center;
+            background: url('./images/Homepage.jpeg') no-repeat center center; /* Background image for hero section */
+            background-size: cover; /* Cover the entire size of the section */
+            padding: 480px 0; /* Large vertical padding for spacing */
+            color: #f2f2f2; /* Light grey text color */
+            text-align: center; /* Center align text */
         }
         .hero-section h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-size: 48px; /* Large font size for main heading */
+            font-weight: 700; /* Bold font weight for heading */
+            margin-bottom: 20px; /* Bottom margin for spacing */
         }
         .hero-section p {
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 30px;
+            font-size: 20px; /* Font size for paragraph */
+            font-weight: 400; /* Font weight for paragraph */
+            margin-bottom: 30px; /* Bottom margin for spacing */
         }
 
-        /* Styles for the footer section */
+        /* Footer styles */
         footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+            background-color: #003366; /* Dark blue background for footer */
+            color: white; /* White text color */
+            text-align: center; /* Center align text */
+            padding: 15px 0; /* Vertical padding for spacing */
         }
         footer p {
-            font-size: 16px;
-            font-weight: 400;
-            color: #666666;
+            font-size: 16px; /* Font size for paragraph */
+            font-weight: 400; /* Font weight for paragraph */
+            color: #666666; /* Grey text color */
         }
 
-        /* Styles for the map section */
+        /* Map styles */
         #map {
-            width: 100%;
-            height: 300px;
-            border: none;
+            width: 100%; /* Full width for map */
+            height: 300px; /* Set height for map */
+            border: none; /* No border for iframe */
         }
 
-        /* Styles for the content container section */
+        /* Content container styles */
         .content-container {
-            display: flex;
-            flex-direction: row;
-            margin: 80px;
+            display: flex; /* Flex display for side-by-side layout */
+            flex-direction: row; /* Arrange items in a row */
+            margin: 80px; /* Margin for spacing around container */
         }
         .content-container h1{
-            font-size: 30px;
-            font-weight: 700;
+            font-size: 30px; /* Font size for heading */
+            font-weight: 700; /* Bold font weight for heading */
         }
 
-        /* Styles for the main section */
+        /* Main content styles */
         main {
-            flex: 1;
-            padding-right: 20px;
+            flex: 1; /* Take up available space */
+            padding-right: 20px; /* Right padding for spacing */
         }
 
-        /* Styles for the additional content section */
+        /* Additional content styles */
         .additional-content {
-            flex: 1;
-            padding: 20px;
-            margin: 20px;
+            flex: 1; /* Take up available space */
+            padding: 20px; /* Padding for spacing */
+            margin: 20px; /* Margin for spacing */
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Navigation bar -->
+        <!-- Navigation bar with links to various sections -->
         <nav>
             <ul>
                 <li><a href="./index.html" class="active">Home</a></li>
@@ -147,22 +147,23 @@
     </header>
      
     <div class="hero-section">
-        <!-- Hero section with a background image -->
+        <!-- Hero image and main message of the page -->
         <h1>Brightening the World,<br> One Smile at a Time.</h1>
         <p>Dandan Dental</p>
+        <!-- Call to action buttons -->
         <a href="tel:+865788959998" class="button">+86 0577-88959998</a>
         <a href="./Dentist/Scheduleappointment.html" class="button">Schedule Appointment</a>
     </div>
     <div class="content-container">
         <main>
-            <!-- Main content section -->
+            <!-- Main content highlighting the services -->
             <h1>Dentists in Wenzhou, Zhejiang Province, China</h1>
             <p>Get in today for affordable dental care with a team that’s in your corner,
                 and on your corner. From general dentistry to dentures and implants,
                 we’ve got you.</p>
         </main>
         <div class="additional-content">
-            <!-- Additional content section with an embedded Google Maps iframe -->
+            <!-- Embedded map for the clinic's location -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14091.289540817004!2d120.70524!3d27.99933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344f64b1ec89ed8f%3A0xda6e46c615fddbac!2sLucheng%20Dandan%20Dentistry%20Clinic!5e0!3m2!1sen!2sus!4v1701337335098!5m2!1sen!2sus"
                     width="800" 
                     height="500" 
@@ -175,7 +176,7 @@
     </div>
 
     <footer>
-        <!-- Footer section -->
+        <!-- Footer with copyright notice -->
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
 </body>
