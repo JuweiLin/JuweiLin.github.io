@@ -34,7 +34,7 @@ Contributing
 Contributions to the Dandan Dental website are welcome. Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests.
 
 License
-This project is licensed under the [LICENSE NAME] License - see the LICENSE.md file for details.
+This project is licensed under the Apache-2.0  License - see the LICENSE.md file for details.
 
 Contact
 For any inquiries or further information, please contact jlin55@syr.edu.
