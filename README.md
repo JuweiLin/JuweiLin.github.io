@@ -19,12 +19,12 @@ Clone the repository:
 
 bash
 Copy code
-git clone [repository URL]
+git clone https://github.com/JuweiLin/JuweiLin.github.io.git
 Navigate to the repository directory:
 
 bash
 Copy code
-cd [repository name]
+cd https://github.com/JuweiLin/JuweiLin.github.io.git
 Open the HTML files in a web browser to view the website.
 
 Usage
