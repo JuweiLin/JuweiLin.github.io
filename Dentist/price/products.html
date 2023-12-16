@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <title>Products - Dandan Dental</title>
     <style>
+        /* Styling for header and footer */
         header, footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 15px 0;
         }
+
+        /* Styling for body */
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
@@ -17,6 +20,7 @@
             background-color: #f4f4f4;
         }
 
+        /* Styling for back button */
         .back-button {
             display: inline-block;
             margin: 10px;
@@ -28,9 +32,12 @@
             cursor: pointer;
         }
 
+        /* Hover effect for back button */
         .back-button:hover {
             background-color: #002244;
         }
+
+        /* Styling for page container */
         .page-container {
             display: flex;
             justify-content: space-between;
@@ -39,6 +46,7 @@
             box-sizing: border-box;
         }
 
+        /* Styling for products container */
         .products-container {
             flex-grow: 2;
             max-width: calc(100% - 240px); /* Adjusted for summary container */
@@ -46,6 +54,7 @@
             margin-left: 15%;
         }
 
+        /* Styling for product item */
         .product-item {
             background-color: white;
             border: 1px solid #ccc;
@@ -57,6 +66,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        /* Styling for product image */
         .product-image {
             width: 120px;
             height: auto;
@@ -64,16 +74,19 @@
             border-radius: 4px;
         }
 
+        /* Styling for product details */
         .product-details {
             flex-grow: 1;
         }
 
+        /* Styling for product title, description, and price */
         .product-title,
         .product-description,
         .product-price {
             margin: 5px 0;
         }
 
+        /* Styling for number input */
         input[type="number"] {
             width: 50px;
             padding: 5px;
@@ -81,6 +94,7 @@
             margin-top: 10px;
         }
 
+        /* Styling for summary container */
         .summary-container {
             width: 200px; /* Fixed width for the summary */
             padding: 20px;
@@ -92,20 +106,22 @@
             margin-right: 5%;
         }
 
+        /* Styling for cart items */
         .cart-items p {
             margin: 5px 0;
         }
 
+        /* Styling for total amount */
         .total-amount h3 {
             margin-top: 10px;
             margin-bottom: 5px;
         }
 
+        /* Styling for total amount value */
         .total-amount p {
             font-size: 1.2em;
             font-weight: bold;
         }
-
     </style>
 </head>
 <body>
@@ -127,6 +143,7 @@
                         <input type="number" id="product-quantity-1" name="product-quantity" min="0" value="0" onchange="updateSummary()">
                     </div>
                 </div>
+                <!-- Product 2 -->
                 <div class="product-item">
                     <img src="../../images/toothpaste.jpg" alt="Toothpaste" class="product-image">
                     <div class="product-details">
@@ -153,31 +170,31 @@
         </div>
     </main>
     <script>
-        function updateSummary() {
-            let total = 0;
-            let summaryHtml = '';
+        function updateSummary() {// Update the cart items and total price
+            let total = 0;// Initialize total price to 0
+            let summaryHtml = '';// Initialize summary HTML to empty string
 
-            document.querySelectorAll('.product-item').forEach(item => {
-                const title = item.querySelector('.product-title').textContent;
-                const priceElement = item.querySelector('.price');
-                const price = parseFloat(priceElement.textContent);
-                const quantity = parseInt(item.querySelector('input[type=number]').value);
+            document.querySelectorAll('.product-item').forEach(item => {// Loop through each product item
+                const title = item.querySelector('.product-title').textContent;// Get the product title
+                const priceElement = item.querySelector('.price');// Get the price element
+                const price = parseFloat(priceElement.textContent);// Get the price value
+                const quantity = parseInt(item.querySelector('input[type=number]').value);// Get the quantity value
 
-                if (quantity > 0) {
-                    total += price * quantity;
-                    summaryHtml += `<p>${title} x ${quantity}</p>`;
+                if (quantity > 0) {// Only add to the summary if quantity is greater than 0
+                    total += price * quantity;// Add to the total price
+                    summaryHtml += `<p>${title} x ${quantity}</p>`;// Add to the summary HTML
                 }
             });
 
-            document.getElementById('cart-items').innerHTML = summaryHtml;
-            document.getElementById('total-amount').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('cart-items').innerHTML = summaryHtml;// Update the cart items
+            document.getElementById('total-amount').textContent = `$${total.toFixed(2)}`;// Update the total price
         }
 
         // Initial update on page load
         updateSummary();
         function goBack() {
             // Navigate back to the dentist page
-            window.location.href = '../price.html'; // Change to the actual URL of your dentist page
+            window.location.href = '../price.html';// Link to the previous page
         }
     </script>
         <footer>
