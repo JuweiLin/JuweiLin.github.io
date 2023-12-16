@@ -75,7 +75,8 @@
 }
 
 .form-row {
-    margin-bottom: 10px;
+    /*style for the form*/
+    margin-bottom: 10px; /* */
     display: flex;
     flex-direction: column;
 }
@@ -90,6 +91,8 @@
 }
     </style>
     <script>
+    //Parameters global variables 
+    //to-be updated by document
     var firstNameValue = '';
     var lastNameValue = '';
     var dobValue = '';
@@ -99,11 +102,14 @@
     var calender='';
     var date_time = '';
     var selectedTime = '';
+
+        // Handles the first Form section provides reason 
         function scheduleAppointment(reason) {
             appointment_reason = reason;
             console.log("Appointment reason selected:", reason);
             showFormSections()
         }
+    
         function showFormSections() {
             // Hide the appointment card section
             document.getElementById('appointmentCardSection').style.display = 'none';
@@ -118,34 +124,41 @@
             // Show the next section
             document.getElementById(nextSection).style.display = 'block';
         }
+    
         function returnAppointment(currentSection) {
+            //returns to "Reason" from 'Personal information'
             if(currentSection == 'formSection1'){
             document.getElementById('formSection2').style.display = 'none';
             document.getElementById('appointmentCardSection').style.display = 'block';
             document.getElementById('formSection1').style.display = 'none';
             document.getElementById('formSection2').style.display = 'none';
             }
+            //returns from "Contact information" to 'Personal information'
             else if(currentSection == 'formSection2'){
             // Reset formSection2 fields
             document.getElementById('appointmentCardSection').style.display = 'none';
             document.getElementById('formSection2').style.display = 'none';
             document.getElementById('formSection1').style.display = 'block';
             }
+            //returns to "Contact information" from 'Appointment date & time'
             else if(currentSection=='formSection3'){
                 document.getElementById('formSection3').style.display = 'none';
                 document.getElementById('formSection2').style.display = 'block';    
             }
+            //returns to "Appointmnet date & time" from 'review information'  
             else if(currentSection=='formSection4'){
                 document.getElementById('formSection4').style.display = 'none';
                 document.getElementById('formSection3').style.display = 'block'; 
             }
         }
+
+    //Listen for when the Calender value is inputted
         document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('Calender').addEventListener('change', function () {
             appointment_slots_random();
         });
     });
-
+    //create random appointment slots with helper functions beign generateAvaibleslots, getRandomSubset and generatetimeslots lines(160-225)
     function appointment_slots_random() {
         const calender = document.getElementById('Calender').value;
         const slotsContainer = document.getElementById('Appointment_slots');
@@ -157,6 +170,7 @@
             slotsContainer.style.display = 'none';
         }
     }
+    
     function generateAvailableSlots(selectedDate) {
     // Assume slots are generated for the day from 9:00 AM to 4:30 PM
     const allSlots = generateTimeSlots();
@@ -181,6 +195,7 @@
         slotsContainer.appendChild(button);
     });
 }
+    //Disables the buttons once a times slots is selected
     function disableOtherButtons() {
         const buttons = document.querySelectorAll('#Appointment_slots button');
         buttons.forEach(button => {
@@ -189,6 +204,7 @@
             }
         });
     }
+    //helper function that generate time slots that further uses helper function
     function generateTimeSlots() {
         const startTime = 9; // 9:00 AM
         const endTime = 16.5; // 4:30 PM
@@ -203,12 +219,13 @@
         }
         return timeSlots;
     }
-
+//helper function that generatetimeslot uses 
     function getRandomSubset(array, count) {
         const shuffledArray = array.sort(() => Math.random() - 0.5);
         return shuffledArray.slice(0, count);
     }
-        function submitAppointment() {
+    //used on the final section being formSection4 which is used to display information with id belonging to finalSection
+    function submitAppointment() {
                     // Display the collected information in the final section
                 
                 firstNameValue = document.getElementById('firstName').value;
@@ -233,25 +250,28 @@
            document.getElementById('finalSectionInfo').style.display='block';
 
         }
-        function toggleDropBox() {
+    function toggleDropBox() {
+        //used for the toggle between if the user can see the dentist list given the dropbox value is yes
         var selection = document.getElementById('selection');
         var dropbox = document.getElementById('dropbox');
         if(selection.value == "yes"){dropbox.style.display='block';}
         else {dropbox.style.display='none';}
-        }
+    }
 
     </script>
+    
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-    // Include your EmailJS User ID
+    //above is the library for email.js
+    //User id found from email.js
     emailjs.init("qAQh4VUB144KZBddD");
         var dentist ='';
     function sendEmail() {
-
-        var sendButton = document.getElementById('send_email_btn');
+    //after clicking on the button disable it so further emails aren't created with the same information
+    var sendButton = document.getElementById('send_email_btn');
     if (sendButton) {
         sendButton.disabled = true;
-    }
+    
         // Send the email
         emailjs.send("service_35c2kmd","template_b6c527p",{
             from_name: "Auto generated email",
@@ -265,12 +285,11 @@
 })
 .then(function(response) {
         console.log('Email sent successfully:', response);
-        // If you want to enable the button after successful sending, uncomment the line below
-        // sendButton.disabled = false;
+// Lets the console know if the email was process successfully
     })
     .catch(function(error) {
         console.error('Email sending failed:', error);
-        // Re-enable the button in case of an error
+        // error occured within the system  
         sendButton.disabled = false;
     });   
 
@@ -316,7 +335,11 @@
             </div>
         </section>
         <div id="formSection1" class="form-section">
+            <!-- HTML structure for Step 1: Personal Information form section -->
+
             <h2>Step 1: Personal Information</h2>
+            <!-- Form capturing first name, last name, and date of birth -->
+
             <form onsubmit="nextFormSection('formSection1', 'formSection2'); return false;">
                 <div class="form-row">
                     <label for="firstName">First Name*</label>
@@ -337,7 +360,9 @@
             </form>
         </div>
         <div id="formSection2" class="form-section">
+              <!-- HTML structure for Step 2: Contact Information form section -->
             <h2>Step 2: Contact Information</h2>
+              <!-- Form capturing email and phone number -->
             <form onsubmit="nextFormSection('formSection2', 'formSection3'); return false;">
                 <div class="form-row">
                     <label for="email">Email*</label>
@@ -355,7 +380,9 @@
         </div>
       
         <div id="formSection3" class="form-section">
+                <!-- HTML structure for Step 2: Appointment Information form section -->
             <h2>Appointment Information</h2>
+             <!-- Form capturing if they are a returning patient, dentist if they are a returning client, and date preference -->
             <form onsubmit="submitAppointment();return false;">
                 <div class="form-row">
                     <label for="selection">Are you a returning patient?</label>
@@ -388,8 +415,10 @@
         </div>
 
         <div id="formSection4" class="form-section">
+              <!-- HTML structure for Step 4: Review Information section -->
             <h2>Review Information</h2>
             <div id="finalSectionInfo"></div>
+            <!-- HTML refer to javascript submitAppointment for the contents -->
             <button class="return_button_section" type="button" onclick="returnAppointment('formSection4')">Back</button>
             <button id="send_email_btn" type="button" onclick="sendEmail()">Confirm</button>
             
