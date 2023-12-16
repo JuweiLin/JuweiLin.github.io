@@ -1,110 +1,131 @@
 <!DOCTYPE html>
+<!-- Declaration that this document is an HTML5 document -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dental Check-Up Services - Dandan Dental</title>
+    <!-- Setting the character encoding to UTF-8 -->
+    <title>Dental Checkup Services - Dandan Dental</title>
+    <!-- Title of the webpage -->
+
     <style>
+        /* CSS style definitions start here */
+
+        /* General styling for the entire body of the page */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif; /* Setting the font */
+            background-color: #f4f4f4; /* Setting the background color */
+            margin: 0; /* Resetting default margin */
+            padding: 0; /* Resetting default padding */
         }
 
+        /* Styling for the header and footer sections */
         header, footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
+            background-color: #003366; /* Dark blue background */
+            color: white; /* White text color */
+            text-align: center; /* Aligning text to the center */
+            padding: 15px 0; /* Padding on top and bottom */
         }
 
+        /* Padding for the main content area */
         main {
-            padding: 20px;
+            padding: 20px; /* 20px padding on all sides */
         }
 
+        /* Styling for the container that holds the teeth image */
         .teeth-image-container {
-            text-align: center;
-            margin: 20px auto;
+            text-align: center; /* Center align the content */
+            margin: 20px auto; /* Automatic margin for horizontal centering */
         }
 
+        /* Styling for the teeth image */
         .teeth-image-container img {
-            max-width: 100%;
-            height: auto;
+            max-width: 100%; /* Maximum width of 100% */
+            height: auto; /* Automatic height to maintain aspect ratio */
         }
 
+        /* Styling for the containers displaying selected teeth and total price */
         .selected-teeth-container,
         .total-price-container {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            max-width: 800px;
-            text-align: center;
+            margin: 20px auto; /* Centralized margin */
+            padding: 20px; /* Padding inside the containers */
+            background-color: white; /* White background */
+            border: 1px solid #ccc; /* Grey border */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 800px; /* Maximum width constraint */
+            text-align: center; /* Text centered inside the containers */
         }
 
+        /* Styling for the list displaying selected teeth */
         .selected-teeth-list {
-            margin-top: 20px;
+            margin-top: 20px; /* Margin at the top */
         }
 
+        /* Styling for each selected tooth display */
         .selected-tooth {
-            display: inline-block;
-            margin: 5px;
-            padding: 5px 10px;
-            background-color: #e6e6e6;
-            border-radius: 5px;
+            display: inline-block; /* Inline-block layout for side-by-side display */
+            margin: 5px; /* Margin around each tooth display */
+            padding: 5px 10px; /* Padding inside the tooth display */
+            background-color: #e6e6e6; /* Light grey background */
+            border-radius: 5px; /* Rounded corners */
         }
 
+        /* Responsive design adjustments for smaller screens */
         @media (max-width: 768px) {
             .service-section {
-                margin: 20px;
+                margin: 20px; /* Adjust margin for smaller screens */
             }
         }
 
+        /* Styling for the back button */
         .back-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 8px 15px;
-            background-color: #003366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+            display: inline-block; /* Inline-block layout for proper positioning */
+            margin: 10px; /* Margin around the button */
+            padding: 8px 15px; /* Padding inside the button */
+            background-color: #003366; /* Dark blue background */
+            color: white; /* White text color */
+            text-decoration: none; /* No underline on the text */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
         }
 
+        /* Styling for the hover state of the back button */
         .back-button:hover {
-            background-color: #002244;
+            background-color: #002244; /* Slightly darker blue on hover */
         }
 
+        /* Styling for instructional text */
         .instructions {
-            text-align: center;
-            margin: 20px;
-            font-size: 1.2rem;
+            text-align: center; /* Center aligning the text */
+            margin: 20px; /* Margin around the text */
+            font-size: 1.2rem; /* Slightly larger font size */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Dandan Dental</h1>
-        <a onclick="goBack()" class="back-button">&#x2190; Back</a>
+        <!-- Header section with a title and back button -->
+        <h1>Dandan Dental</h1> <!-- Main title -->
+        <a onclick="goBack()" class="back-button">&#x2190; Back</a> <!-- Back button with an onclick event -->
     </header>
 
     <main>
+        <!-- Main content area -->
+
+        <!-- Title for tooth selection section -->
         <h2 class="teeth-selection-title" style="text-align:center;">Tooth Selection for Check-Up</h2>
 
+        <!-- Instructional text for the user -->
         <div class="instructions">
             <p>Please click on the diagram below to select the teeth you want checked.</p>
         </div>
 
-        <!-- Title for the teeth selection section -->
-
-
+        <!-- Container for the interactive teeth image -->
         <div class="teeth-image-container">
             <img src="../../images/Tooth-Types_Adult_Web.jpg" usemap="#teethMap" alt="Dental Jaws Diagram">
             
-            <!-- Image map for interactive teeth -->
+            <!-- Image map with clickable areas for teeth selection -->
             <map name="teethMap">
-                <!-- Example for one tooth area; you will need to repeat for each tooth with proper coordinates -->
+                <!-- Each area corresponds to a tooth. The 'coords' attribute defines the shape and location of clickable areas -->
                 <area shape="circle" coords="52,264,10" href="#" alt="Tooth 1" onclick="selectTooth(18);">
                 <area shape="circle" coords="57,218,10" href="#" alt="Tooth 1" onclick="selectTooth(17);">
                 <area shape="circle" coords="68,173,10" href="#" alt="Tooth 1" onclick="selectTooth(16);">
@@ -138,54 +159,60 @@
                 <area shape="circle" coords="296,514,10" href="#" alt="Tooth 1" onclick="selectTooth(36);">
                 <area shape="circle" coords="305,466,10" href="#" alt="Tooth 1" onclick="selectTooth(37);">
                 <area shape="circle" coords="310,424,10" href="#" alt="Tooth 1" onclick="selectTooth(38);">
-                <!-- ... more areas for each tooth -->
             </map>
         </div>
 
+        <!-- Container for displaying selected teeth -->
         <div class="selected-teeth-container">
             <h3>Selected Teeth:</h3>
             <div id="selected-teeth-list" class="selected-teeth-list">
-                <!-- Selected teeth will be listed here -->
+                <!-- JavaScript dynamically updates this list based on user interaction -->
             </div>
         </div>
 
-        <!-- Container for displaying total price -->
+        <!-- Container for displaying the total price of selected services -->
         <div class="total-price-container">
             <h3>Total Price:</h3>
-            <div id="total-price">$0</div>
+            <div id="total-price">$0</div> <!-- Initial total price -->
         </div>
 
-        <!-- Additional sections if needed -->
+        <!-- Space for additional sections if necessary -->
     </main>
 
     <footer>
+        <!-- Footer section with copyright information -->
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
 
     <script>
-        var selectedTeeth = [];
-        var pricePerTooth = 50; // Example price per tooth for check-up
+        // JavaScript code for the interactive functionality of the tooth selection
+
+        var selectedTeeth = []; // Array to keep track of selected teeth
+        var pricePerTooth = 50; // Presumed price per tooth for the check-up
 
         function selectTooth(toothIndex) {
-            // Check if the tooth is already selected
+            // Function called when a tooth is selected
             if (!selectedTeeth.includes(toothIndex)) {
-                selectedTeeth.push(toothIndex);
-                updateSelectedTeethList();
-                updateTotalPrice();
+                selectedTeeth.push(toothIndex); // Add the selected tooth to the array
+                updateSelectedTeethList(); // Update the display of selected teeth
+                updateTotalPrice(); // Update the total price display
             } else {
-                alert('Tooth ' + toothIndex + ' is already selected.');
+                alert('Tooth ' + toothIndex + ' is already selected.'); // Alert if the tooth is already selected
             }
         }
 
         function updateSelectedTeethList() {
+            // Function to update the list of selected teeth in the UI
             var listElement = document.getElementById('selected-teeth-list');
-            listElement.innerHTML = ''; // Clear current list
+            listElement.innerHTML = ''; // Clear the current list
 
+            // Iterate over each selected tooth and create a display element
             selectedTeeth.forEach(function(tooth) {
                 var toothElement = document.createElement('span');
                 toothElement.classList.add('selected-tooth');
                 toothElement.textContent = 'Tooth ' + tooth + ' ';
 
+                // Add a button to remove a selected tooth
                 var removeButton = document.createElement('span');
                 removeButton.textContent = '✖';
                 removeButton.style.cursor = 'pointer';
@@ -196,28 +223,28 @@
                 toothElement.appendChild(removeButton);
                 listElement.appendChild(toothElement);
             });
-
-            // Scroll to the selected teeth container
-            document.querySelector('.selected-teeth-container').scrollIntoView({ behavior: 'smooth' });
         }
 
         function removeTooth(toothIndex) {
+            // Function to remove a selected tooth
             selectedTeeth = selectedTeeth.filter(function(tooth) {
-                return tooth !== toothIndex;
+                return tooth !== toothIndex; // Keep all teeth except the one to be removed
             });
-            updateSelectedTeethList();
-            updateTotalPrice();
+            updateSelectedTeethList(); // Update the list after removal
+            updateTotalPrice(); // Update the total price
         }
+
         function updateTotalPrice() {
+            // Function to update the total price based on the selected teeth
             var totalPriceElement = document.getElementById('total-price');
-            var totalPrice = selectedTeeth.length * pricePerTooth;
-            totalPriceElement.textContent = '$' + totalPrice;
+            var totalPrice = selectedTeeth.length * pricePerTooth; // Calculate the total price
+            totalPriceElement.textContent = '$' + totalPrice; // Update the displayed price
         }
 
         function goBack() {
-            window.location.href = '../price.html';
+            // Function to go back to the previous page
+            window.location.href = '../price.html'; // Redirect to the 'price.html' page
         }
-
     </script>
 </body>
 </html>
