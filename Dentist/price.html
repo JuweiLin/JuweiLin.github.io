@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Pricing - Dandan Dental</title>
     <style>
+        /* Styling for the header */
         header {
             background-color: #003366;
             padding: 30px 0;
@@ -15,10 +16,13 @@
             z-index: 1000;
         }
 
+        /* Styling for the body */
         body {
             padding-top: 70px;
             font-family: 'Open Sans', sans-serif;
         }
+
+        /* Styling for the footer */
         footer {
             background-color: #003366;
             color: white;
@@ -30,6 +34,8 @@
             font-weight: 400;
             color: #666666;
         }
+
+        /* Styling for the navigation */
         nav p{
             font-size: 20px;
             font-weight: 400;
@@ -59,6 +65,8 @@
             border-bottom: 3px solid white;
             color: white;
         }
+
+        /* Styling for the service selection */
         .service-selection {
             display: flex;
             flex-direction: column;
@@ -68,6 +76,7 @@
             margin-bottom: 5%;
         }
 
+        /* Styling for the service rows */
         .service-row {
             display: flex;
             justify-content: space-around;
@@ -75,6 +84,7 @@
             gap: 40px;
         }
 
+        /* Styling for the service boxes */
         .service-box {
             border: 1px solid #003366;
             border-radius: 10px;
@@ -88,21 +98,26 @@
             transition: all 0.3s ease;
         }
 
+        /* Styling for the service box hover effect */
         .service-box:hover {
             background-color: #003366;
             color: white;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
+        /* Styling for the service box headings */
         .service-box h2 {
             margin: 0 0 10px 0;
             font-size: 18px;
         }
 
+        /* Styling for the service box paragraphs */
         .service-box p {
             font-size: 14px;
             margin: 0;
         }
+
+        /* Styling for the price header */
         .price-header {
             text-align: center;
             padding: 2px 0;
@@ -111,11 +126,14 @@
         .price-header h1 {
             font-size: 2rem;
         }
+
+        /* Styling for the price section */
         .price-section {
             border: #003366;
             padding: 40px 0;
         }
 
+        /* Styling for the price section headings */
         .price-section h1 {
             animation-duration: 3s;
             animation-name: h1-slidein;
@@ -125,6 +143,7 @@
             margin-left: 20%;
         }
 
+        /* Styling for the price section paragraphs */
         .price-section p {
             animation-duration: 3s;
             animation-name: p-slidein;
@@ -133,6 +152,8 @@
             line-height: 1.6;
             margin-left: 30%;
         }
+
+        /* Keyframe animation for sliding in the h1 element */
         @keyframes h1-slidein {
             from {
                 margin-left: 100%;
@@ -144,6 +165,8 @@
                 width: 100%;
             }
         }
+
+        /* Keyframe animation for sliding in the p element */
         @keyframes p-slidein {
             from {
                 margin-left: 100%;
@@ -160,7 +183,7 @@
 
 <body>
     <header>
-
+        <!-- Navigation -->
         <nav>
             <ul>
                 <li><a href="../index.html" >Home</a></li>
@@ -170,21 +193,23 @@
                 <li><a href="./price.html" class="active">Costs & Affordability</a></li>
             </ul>
         </nav>
-        
     </header>
     <main>
         <seciton>
+            <!-- Price Header -->
             <div class="price-header">
                 <h1>Costs & Affordability</h1>
             </div>
         </seciton>
         <section>
+            <!-- Price Section -->
             <div class="price-section">       
                 <h1>Welcome to Dandan Dental</h1>
                 <p>Caring for Your Smile with Affordable Excellence:<br> Where Quality Meets Value at Dandan Dental.</p>
             </div>
         <section>
         <div class="service-selection">
+            <!-- Service Selection -->
             <div class="service-row">
                 <div class="service-box" onclick="selectService('cleaning')">
                     <h2>Cleaning</h2>
@@ -229,9 +254,14 @@
     </main>
 
     <footer>
+        <!-- Footer -->
         <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
     </footer>
     <script>
+        /**
+         * Function to select a service and redirect to the corresponding page.
+         * @param {string} serviceType - The type of service to select.
+         */
         function selectService(serviceType) {
             const serviceUrls = {
                 'cleaning': './price/cleaning.html',
@@ -248,5 +278,3 @@
             }
         }
     </script>
-</body>
-</html>
