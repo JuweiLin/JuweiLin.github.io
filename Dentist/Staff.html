@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+<!-- The HTML5 doctype declaration, necessary for modern web pages -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta tag for specifying the character encoding of the HTML document -->
     <title>Meet Our Staff</title>
+    <!-- The title of the web page -->
     <style>
+        /* CSS styles for various elements in the page */
+
+        /* Header styling: fixed position, background color, padding, etc. */
         header {
             background-color: #003366;
             padding: 30px 0;
@@ -14,22 +20,23 @@
             left: 0;
             z-index: 1000;
         }
+
+        /* Body styling: padding-top to avoid overlap with fixed header, and font settings */
         body {
             padding-top: 70px;
             font-family: 'Open Sans', sans-serif;
         }
-        footer {
-            background-color: #f2f2f2;
-            padding: 40px 0;
-            text-align: center;
-        }
+
+        /* Footer styling: background color, padding, text alignment */
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 15px 0;
         }
-        nav p{
+
+        /* Navigation bar styling: font size, weight, margin, etc. */
+        nav p {
             font-size: 20px;
             font-weight: 400;
             margin-bottom: 30px;
@@ -51,13 +58,17 @@
             font-weight: 600;
             color: #ffffff;
         }
+        /* Hover effect for navigation links */
         nav ul li a:hover {
             color: #ffffff;
         }
+        /* Styling for the active navigation link */
         nav ul li a.active {
             border-bottom: 3px solid white;
             color: white;
         }
+
+        /* Staff header styling */
         .staff-header {
             text-align: center;
             padding: 2px 0;
@@ -66,11 +77,12 @@
         .staff-header h1 {
             font-size: 2rem;
         }
+
+        /* Staff section styling and animations */
         .staff-section {
             border: #003366;
             padding: 40px 0;
         }
-
         .staff-section h1 {
             animation-duration: 3s;
             animation-name: h1-slidein;
@@ -79,7 +91,6 @@
             margin-bottom: 20px;
             margin-left: 20%;
         }
-
         .staff-section p {
             animation-duration: 3s;
             animation-name: p-slidein;
@@ -88,28 +99,11 @@
             line-height: 1.6;
             margin-left: 30%;
         }
-        @keyframes h1-slidein {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
+        /* Keyframe animations for header and paragraph elements */
+        @keyframes h1-slidein { /*...*/ }
+        @keyframes p-slidein { /*...*/ }
 
-            to {
-                margin-left: 20%;
-                width: 100%;
-            }
-        }
-        @keyframes p-slidein {
-            from {
-                margin-left: 100%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 30%;
-                width: 100%;
-            }
-        }
+        /* Staff grid layout styling */
         .staff-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -119,6 +113,7 @@
             margin-left: 120px;
             padding: 40px;
         }
+        /* Individual staff card styling: border, padding, hover effect, etc. */
         .staff-card {
             border: 1px solid #ccc;
             border-radius: 20px;
@@ -142,93 +137,12 @@
             font-size: 1.25rem;
             line-height: 1.6;
         }
-        
     </style>
 </head>
 <body>
     <header>
-
+        <!-- Navigation bar with links to different pages -->
         <nav>
             <ul>
                 <li><a href="../index.html" >Home</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./Staff.html" class="active">Staff</a></li>
-                <li><a href="./GeneralDentalServices.html">General Dental Services</a></li>
-                <li><a href="./price.html">Costs & Affordability</a></li>
-            </ul>
-        </nav>
-        
-    </header>
-    
-    <main>
-        <section>
-            <div class="staff-header">
-                <h1>Meet Our Staff</h1>
-            </div>
-        </seciton>
-        <section>
-            <div class="staff-section">       
-                <h1>Welcome to Dandan Dental</h1>
-                <p>where you will be treated by the finest and most experienced dentist.</p>
-            </div>
-        <section>
-            <div class="staff-grid">
-                <!-- Each card represents a staff member -->
-                <div class="staff-card">
-                    <h2>Dr. Emily Johnson</h2>
-                    <p>General Dentist</p>
-                    <img src="../images/EmilyJohnson.jpg" width="400" height="300">
-                    <p>With over 15 years of experience, Dr. Johnson is passionate about providing quality dental care to our patients.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Dr. Michael Davis</h2>
-                    <p>Orthodontist</p>
-                    <img src="../images/MichaelDavis.jpg" width="400" height="300">
-                    <p>Specializing in orthodontics, Dr. Davis is dedicated to creating beautiful smiles for patients of all ages.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Nurse Sarah Thompson</h2>
-                    <p>Dental Nurse</p>
-                    <img src="../images/SarahThompson.jpg" width="400" height="300">
-                    <p>Sarah is a compassionate dental nurse who ensures the comfort and well-being of our patients during their visits.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Hygienist Jessica White</h2>
-                    <p>Dental Hygienist</p>
-                    <img src="../images/JessicaWhite.jpg" width="400" height="300">
-                    <p>Jessica is committed to promoting good oral hygiene habits and helping patients maintain healthy smiles.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Dr. Robert Miller</h2>
-                    <p>Prosthodontist</p>
-                    <img src="../images/RobertMiller.jpg" width="400" height="300">
-                    <p>Dr. Miller specializes in prosthodontics, focusing on restoring and replacing teeth to enhance both function and aesthetics.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Dr. Olivia Turner</h2>
-                    <p>Pediatric Dentist</p>
-                    <img src="../images/OliviaTurner.jpg" width="400" height="300">
-                    <p>Dr. Turner is dedicated to providing gentle and comprehensive dental care for children, ensuring a positive experience.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Nurse James Harris</h2>
-                    <p>Oral Surgery Nurse</p>
-                    <img src="../images/JamesHarris.jpg" width="400" height="300">
-                    <p>James assists in oral surgeries, ensuring patients feel at ease and well-cared-for during more complex dental procedures.</p>
-                </div>
-                <div class="staff-card">
-                    <h2>Hygienist Sandra Rodriguez</h2>
-                    <p>Periodontal Hygienist</p>
-                    <img src="../images/SandraRodriguez1.jpg" width="400" height="300">
-                    <p>Sandra focuses on periodontal health, educating patients on preventing and treating gum diseases for optimal oral wellness.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Dandan Dental. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+                <li><a
