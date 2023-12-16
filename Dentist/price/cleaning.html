@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Dental Cleaning Services - Dandan Dental</title>
     <style>
+        /* Set the font family, background color, margin, and padding for the body */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
@@ -11,6 +12,7 @@
             padding: 0;
         }
 
+        /* Set the background color, text color, text alignment, and padding for the header and footer */
         header, footer {
             background-color: #003366;
             color: white;
@@ -18,10 +20,12 @@
             padding: 15px 0;
         }
 
+        /* Set the padding for the main content */
         main {
             padding: 20px;
         }
 
+        /* Set the background color, margin, padding, border, border radius, and max width for the service sections */
         .service-section {
             background-color: white;
             margin: 20px auto;
@@ -31,22 +35,26 @@
             max-width: 800px;
         }
 
+        /* Set the color and font size for the section headings */
         .service-section h2 {
             color: #003366;
             font-size: 2rem;
         }
 
+        /* Set the font size and line height for the section paragraphs */
         .service-section p {
             font-size: 1rem;
             line-height: 1.6;
         }
 
+        /* Set the margin for the service sections on screens with a maximum width of 768px */
         @media (max-width: 768px) {
             .service-section {
                 margin: 20px;
             }
         }
 
+        /* Set the display, margin, padding, background color, text color, text decoration, border radius, and cursor for the back button */
         .back-button {
             display: inline-block;
             margin: 10px;
@@ -58,10 +66,10 @@
             cursor: pointer;
         }
 
+        /* Set the background color for the back button on hover */
         .back-button:hover {
             background-color: #002244;
         }
-
     </style>
 </head>
 <body>
@@ -75,14 +83,12 @@
             <h2>Regular Cleaning</h2>
             <p>Regular cleaning, also known as prophylaxis, is essential for maintaining good oral hygiene. This routine procedure is recommended bi-annually to remove plaque buildup, prevent cavities, and keep your gums healthy.</p>
             <p><strong>Price: $75</strong></p> <!-- Added price for Regular Cleaning -->
-            <!-- Additional details, images, or booking links -->
         </section>
 
         <section class="service-section">
             <h2>Deep Cleaning</h2>
             <p>Deep cleaning, or scaling and root planing, is a more intensive cleaning procedure. It is typically recommended for patients with signs of gum disease and involves removing tartar from above and below the gum line.</p>
             <p><strong>Price: $200</strong></p> <!-- Added price for Deep Cleaning -->
-            <!-- Additional details, images, or booking links -->
         </section>
     </main>
 
@@ -91,8 +97,8 @@
     </footer>
 
     <script>
-        function goBack() {
-            window.location.href = '../price.html';
+        function goBack() {// Function to go back to the previous page
+            window.location.href = '../price.html';// Link to the previous page
         }
     </script>
 </body>
