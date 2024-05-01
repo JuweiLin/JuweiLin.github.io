@@ -11,30 +11,28 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById('map'), {zoom: 7, center: {lat: 36.778259, lng: -119.417931}});
   directionsRenderer.setMap(map);
   const waypts = [];
-  waypts.push({location: '40.444332,-79.943344', stopover: true});
-  waypts.push({location: '37.9738557204833,-81.09758830674727', stopover: true});
+  waypts.push({location: '40.44433211,-79.94334411', stopover: true});
+  waypts.push({location: '40.44433211,-79.94334411', stopover: true});
   waypts.push({location: '37.9012094700352,-81.05424917507789', stopover: true});
+  waypts.push({location: '37.88058960176819,-81.22675553925679', stopover: true});
+  waypts.push({location: '35.460822792987145,-82.3679201600909', stopover: true});
+  waypts.push({location: '35.83724533182074,-82.3396958253989', stopover: true});
+  waypts.push({location: '35.49681121271722,-82.60513707173853', stopover: true});
+  waypts.push({location: '35.502541521910274,-82.27083758169523', stopover: true});
   waypts.push({location: '36.13564463990475,-80.27922432939454', stopover: true});
   waypts.push({location: '36.11826014163652,-80.28324640055978', stopover: true});
   waypts.push({location: '36.11826014163652,-80.28324640055978', stopover: true});
-  waypts.push({location: '35.52485914307059,-82.41261491052933', stopover: true});
-  waypts.push({location: '35.460822792987145,-82.3679201600909', stopover: true});
-  waypts.push({location: '35.06913754222278,-83.23912060465692', stopover: true});
-  waypts.push({location: '35.502541521910274,-82.27083758169523', stopover: true});
-  waypts.push({location: '33.79510284126239,-84.32034875262632', stopover: true});
-  waypts.push({location: '33.77614737631546,-84.39614062184334', stopover: true});
-  waypts.push({location: '31.974285,-81.071078', stopover: true});
-  waypts.push({location: '32.036011587079955,-81.052554046899', stopover: true});
-  waypts.push({location: '31.992234,-80.849316', stopover: true});
-  waypts.push({location: '35.78530936403513,-78.68126094474306', stopover: true});
-  waypts.push({location: '36.002014604515125,-78.93805713095804', stopover: true});
   waypts.push({location: '35.921039686958,-79.04210693049036', stopover: true});
+  waypts.push({location: '35.795994497720265,-78.77002299325274', stopover: true});
+  waypts.push({location: '36.002014604515125,-78.93805713095804', stopover: true});
+  waypts.push({location: '35.78530936403513,-78.68126094474306', stopover: true});
   waypts.push({location: '35.566849,-75.468491', stopover: true});
-  waypts.push({location: '36.6335911761814,-76.22532058300811', stopover: true});
-  waypts.push({location: '39.81091029122767,-77.24190392915835', stopover: true});
-  waypts.push({location: '39.58416515415241,-77.52190739888074', stopover: true});
+  waypts.push({location: '36.85175614100271,-75.97466215779825', stopover: true});
   waypts.push({location: '38.90886362543028,-77.07242126285739', stopover: true});
   waypts.push({location: '38.893302833590255,-77.01942900234033', stopover: true});
+  waypts.push({location: '39.58416515415241,-77.52190739888074', stopover: true});
+  waypts.push({location: '39.81091029122767,-77.24190392915835', stopover: true});
+  waypts.push({location: '40.26262663597528,-76.88676746640421', stopover: true});
   directionsService.route({origin: '43.12430783861922,-77.61942524146077', destination: '43.12430783861922,-77.61942524146077', waypoints: waypts, optimizeWaypoints: true, travelMode: 'DRIVING'}, function(response, status) {
     if (status === 'OK') {directionsRenderer.setDirections(response);} else {window.alert('Directions request failed due to ' + status);}});
 }</script>
@@ -44,32 +42,30 @@ function initMap() {
 <h1>Route Details</h1>
 <table>
 <tr><th>Segment</th><th>Place Name</th><th>Start Point</th><th>End Point</th><th>Duration</th></tr>
-<tr><td>1</td><td>Start to CMU</td><td>30 Celebration Dr, Rochester, NY 14620, USA</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>5 hours 5 mins</td></tr>
-<tr><td>2</td><td>CMU to 5.3 Airbnb</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>1 Concho Rd, Minden, WV 25879, USA</td><td>3 hours 46 mins</td></tr>
-<tr><td>3</td><td>5.3 Airbnb to New River Gorge National Park</td><td>1 Concho Rd, Minden, WV 25879, USA</td><td>McKendree Rd, Layland, WV 25864, USA</td><td>50 mins</td></tr>
-<tr><td>4</td><td>New River Gorge National Park to Wake Forest</td><td>McKendree Rd, Layland, WV 25864, USA</td><td>1834 Wake Forest Rd, Winston-Salem, NC 27109, USA</td><td>3 hours 17 mins</td></tr>
-<tr><td>5</td><td>Wake Forest to The Graylyn Estate</td><td>1834 Wake Forest Rd, Winston-Salem, NC 27109, USA</td><td>Graylyn Conference Center, 1900 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>7 mins</td></tr>
-<tr><td>6</td><td>The Graylyn Estate to The Graylyn Estate</td><td>Graylyn Conference Center, 1900 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>2201 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>5 mins</td></tr>
-<tr><td>7</td><td>The Graylyn Estate to 5.4 Airbnb</td><td>2201 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>594 US-74 ALT, Fairview, NC 28730, USA</td><td>2 hours 16 mins</td></tr>
-<tr><td>8</td><td>5.4 Airbnb to Bearwallow Mountain Trail</td><td>594 US-74 ALT, Fairview, NC 28730, USA</td><td>4854 Co Rd 1594, Hendersonville, NC 28792, USA</td><td>20 mins</td></tr>
-<tr><td>9</td><td>Bearwallow Mountain Trail to Dry Falls</td><td>4854 Co Rd 1594, Hendersonville, NC 28792, USA</td><td>14901 Highlands Rd, Highlands, NC 28741, USA</td><td>1 hour 57 mins</td></tr>
-<tr><td>10</td><td>Dry Falls to 5.5 Airbnb</td><td>14901 Highlands Rd, Highlands, NC 28741, USA</td><td>3081 NC-9, Black Mountain, NC 28711, USA</td><td>1 hour 58 mins</td></tr>
-<tr><td>11</td><td>5.5 Airbnb to Emory University</td><td>3081 NC-9, Black Mountain, NC 28711, USA</td><td>1441 Clifton Rd, Atlanta, GA 30322, USA</td><td>3 hours 25 mins</td></tr>
-<tr><td>12</td><td>Emory University to Geo tech</td><td>1441 Clifton Rd, Atlanta, GA 30322, USA</td><td>247 4th St NW, Atlanta, GA 30332, USA</td><td>21 mins</td></tr>
-<tr><td>13</td><td>Geo tech to Wormsloe Historic Site</td><td>247 4th St NW, Atlanta, GA 30332, USA</td><td>Unnamed Road, Savannah, GA 31406, USA</td><td>3 hours 56 mins</td></tr>
-<tr><td>14</td><td>Wormsloe Historic Site to 5.6 Airbnb</td><td>Unnamed Road, Savannah, GA 31406, USA</td><td>2601 Mechanics Ave, Savannah, GA 31404, USA</td><td>14 mins</td></tr>
-<tr><td>15</td><td>5.6 Airbnb to Tybee Island beach</td><td>2601 Mechanics Ave, Savannah, GA 31404, USA</td><td>27 Tybrisa St, Tybee Island, GA 31328, USA</td><td>23 mins</td></tr>
-<tr><td>16</td><td>Tybee Island beach to NCSU</td><td>27 Tybrisa St, Tybee Island, GA 31328, USA</td><td>Varsity Dr at West Deck, Raleigh, NC 27606, USA</td><td>5 hours 22 mins</td></tr>
-<tr><td>17</td><td>NCSU to Duke</td><td>Varsity Dr at West Deck, Raleigh, NC 27606, USA</td><td>413 Chapel Dr, Durham, NC 27710, USA</td><td>30 mins</td></tr>
-<tr><td>18</td><td>Duke to UNC</td><td>413 Chapel Dr, Durham, NC 27710, USA</td><td>412 Deming Rd, Chapel Hill, NC 27514, USA</td><td>20 mins</td></tr>
-<tr><td>19</td><td>UNC to Outer Banks</td><td>412 Deming Rd, Chapel Hill, NC 27514, USA</td><td>25676 North Carolina Hwy 12, Rodanthe, NC 27968, USA</td><td>3 hours 58 mins</td></tr>
-<tr><td>20</td><td>Outer Banks to Southern Chesapeake Athleic Center</td><td>25676 North Carolina Hwy 12, Rodanthe, NC 27968, USA</td><td>426 Benefit Rd, Chesapeake, VA 23322, USA</td><td>1 hour 51 mins</td></tr>
-<tr><td>21</td><td>Southern Chesapeake Athleic Center to Gettysburg National Military Park</td><td>426 Benefit Rd, Chesapeake, VA 23322, USA</td><td>998-900 US-15 BUS, Gettysburg, PA 17325, USA</td><td>4 hours 27 mins</td></tr>
-<tr><td>22</td><td>Gettysburg National Military Park to 5.8 Airbnb</td><td>998-900 US-15 BUS, Gettysburg, PA 17325, USA</td><td>12743 Spruce Run Rd, Myersville, MD 21773, USA</td><td>40 mins</td></tr>
-<tr><td>23</td><td>5.8 Airbnb to Georgetown University</td><td>12743 Spruce Run Rd, Myersville, MD 21773, USA</td><td>3701 P St NW, Washington, DC 20057, USA</td><td>1 hour 16 mins</td></tr>
-<tr><td>24</td><td>Georgetown University to JHU</td><td>3701 P St NW, Washington, DC 20057, USA</td><td>515 Pennsylvania Avenue NW, Washington, DC 20001, USA</td><td>18 mins</td></tr>
-<tr><td>25</td><td>JHU to Start</td><td>515 Pennsylvania Avenue NW, Washington, DC 20001, USA</td><td>30 Celebration Dr, Rochester, NY 14620, USA</td><td>6 hours 15 mins</td></tr>
-<tr><td colspan='4'><strong>Total Duration</strong></td><td><strong>3177.78 minutes</strong></td></tr>
+<tr><td>1</td><td>Start to 5.3 Airbnb</td><td>30 Celebration Dr, Rochester, NY 14620, USA</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>5 hours 5 mins</td></tr>
+<tr><td>2</td><td>5.3 Airbnb to 5.3 Airbnb</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>1 min</td></tr>
+<tr><td>3</td><td>5.3 Airbnb to New River Gorge National Park</td><td>Warner Hall, 5000 Forbes Ave, Pittsburgh, PA 15213, USA</td><td>McKendree Rd, Layland, WV 25864, USA</td><td>4 hours 22 mins</td></tr>
+<tr><td>4</td><td>New River Gorge National Park to 5.4 Airbnb</td><td>McKendree Rd, Layland, WV 25864, USA</td><td>354 Craddock Rd, Mt Hope, WV 25880, USA</td><td>44 mins</td></tr>
+<tr><td>5</td><td>5.4 Airbnb to Bearwallow Mountain Trail</td><td>354 Craddock Rd, Mt Hope, WV 25880, USA</td><td>4854 Co Rd 1594, Hendersonville, NC 28792, USA</td><td>4 hours 37 mins</td></tr>
+<tr><td>6</td><td>Bearwallow Mountain Trail to Pisgah Nathinal Forest</td><td>4854 Co Rd 1594, Hendersonville, NC 28792, USA</td><td>860 Haney Crk Rd, Burnsville, NC 28714, USA</td><td>1 hour 27 mins</td></tr>
+<tr><td>7</td><td>Pisgah Nathinal Forest to The North Carolina Arboretum</td><td>860 Haney Crk Rd, Burnsville, NC 28714, USA</td><td>100 Running Cedar Rd, Asheville, NC 28806, USA</td><td>1 hour 8 mins</td></tr>
+<tr><td>8</td><td>The North Carolina Arboretum to 5.5 Airbnb</td><td>100 Running Cedar Rd, Asheville, NC 28806, USA</td><td>3081 NC-9, Black Mountain, NC 28711, USA</td><td>44 mins</td></tr>
+<tr><td>9</td><td>5.5 Airbnb to Wake Forest</td><td>3081 NC-9, Black Mountain, NC 28711, USA</td><td>1834 Wake Forest Rd, Winston-Salem, NC 27109, USA</td><td>2 hours 15 mins</td></tr>
+<tr><td>10</td><td>Wake Forest to The Graylyn Estate</td><td>1834 Wake Forest Rd, Winston-Salem, NC 27109, USA</td><td>Graylyn Conference Center, 1900 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>7 mins</td></tr>
+<tr><td>11</td><td>The Graylyn Estate to The Graylyn Estate</td><td>Graylyn Conference Center, 1900 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>2201 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>5 mins</td></tr>
+<tr><td>12</td><td>The Graylyn Estate to UNC</td><td>2201 Reynolda Rd, Winston-Salem, NC 27106, USA</td><td>412 Deming Rd, Chapel Hill, NC 27514, USA</td><td>1 hour 27 mins</td></tr>
+<tr><td>13</td><td>UNC to 5.6 Airbub</td><td>412 Deming Rd, Chapel Hill, NC 27514, USA</td><td>722 Branniff Dr, Cary, NC 27513, USA</td><td>29 mins</td></tr>
+<tr><td>14</td><td>5.6 Airbub to Duke</td><td>722 Branniff Dr, Cary, NC 27513, USA</td><td>413 Chapel Dr, Durham, NC 27710, USA</td><td>27 mins</td></tr>
+<tr><td>15</td><td>Duke to NCSU</td><td>413 Chapel Dr, Durham, NC 27710, USA</td><td>Varsity Dr at West Deck, Raleigh, NC 27606, USA</td><td>30 mins</td></tr>
+<tr><td>16</td><td>NCSU to Outer Banks</td><td>Varsity Dr at West Deck, Raleigh, NC 27606, USA</td><td>25676 North Carolina Hwy 12, Rodanthe, NC 27968, USA</td><td>3 hours 35 mins</td></tr>
+<tr><td>17</td><td>Outer Banks to 5.7 Airbub</td><td>25676 North Carolina Hwy 12, Rodanthe, NC 27968, USA</td><td>2315 Atlantic Ave, Virginia Beach, VA 23451, USA</td><td>2 hours 24 mins</td></tr>
+<tr><td>18</td><td>5.7 Airbub to Georgetown University</td><td>2315 Atlantic Ave, Virginia Beach, VA 23451, USA</td><td>3701 P St NW, Washington, DC 20057, USA</td><td>3 hours 16 mins</td></tr>
+<tr><td>19</td><td>Georgetown University to JHU</td><td>3701 P St NW, Washington, DC 20057, USA</td><td>515 Pennsylvania Avenue NW, Washington, DC 20001, USA</td><td>18 mins</td></tr>
+<tr><td>20</td><td>JHU to 5.8 Airbnb</td><td>515 Pennsylvania Avenue NW, Washington, DC 20001, USA</td><td>12743 Spruce Run Rd, Myersville, MD 21773, USA</td><td>1 hour 20 mins</td></tr>
+<tr><td>21</td><td>5.8 Airbnb to Gettysburg National Military Park</td><td>12743 Spruce Run Rd, Myersville, MD 21773, USA</td><td>998-900 US-15 BUS, Gettysburg, PA 17325, USA</td><td>41 mins</td></tr>
+<tr><td>22</td><td>Gettysburg National Military Park to Harrisburg food</td><td>998-900 US-15 BUS, Gettysburg, PA 17325, USA</td><td>412 N 2nd St, Harrisburg, PA 17101, USA</td><td>49 mins</td></tr>
+<tr><td>23</td><td>Harrisburg food to Start</td><td>412 N 2nd St, Harrisburg, PA 17101, USA</td><td>30 Celebration Dr, Rochester, NY 14620, USA</td><td>4 hours 15 mins</td></tr>
+<tr><td colspan='4'><strong>Total Duration</strong></td><td><strong>2404.82 minutes</strong></td></tr>
 </table>
 </body>
 </html>
